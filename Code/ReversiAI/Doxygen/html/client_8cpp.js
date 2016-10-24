@@ -1,0 +1,27 @@
+var client_8cpp =
+[
+    [ "closeConnection", "client_8cpp.html#aaf912c696192e6a13eb70526891b4cd2", null ],
+    [ "getDisqualifiedPlayer", "client_8cpp.html#a6240d46578b6987ff39c9c5c49699a82", null ],
+    [ "getLatestMessageType", "client_8cpp.html#ab59b8db55efae8daf1dcc86e15e99360", null ],
+    [ "getMap", "client_8cpp.html#a75fdccf03f6263c4d18bb74d9e078b37", null ],
+    [ "getMove", "client_8cpp.html#ab92f3b2e94f4ede0e0e49ffa3daafed1", null ],
+    [ "getPlayerNumber", "client_8cpp.html#aadd379d8bea5c41448de1784f879b319", null ],
+    [ "getSearchDepth", "client_8cpp.html#a89013cffb40765d2a361d97865899737", null ],
+    [ "getTimeLimit", "client_8cpp.html#a937ee7fcc4721e63d314e57f8b11356c", null ],
+    [ "listenToServer", "client_8cpp.html#a3e0441187d07ebec812f329d918fc61b", null ],
+    [ "readMessage", "client_8cpp.html#ad0b85db2fd6b82c4343af29c4564d9c0", null ],
+    [ "sendMessage", "client_8cpp.html#a2900ca2417346d88eca4c2de0c1f94a5", null ],
+    [ "sendMove", "client_8cpp.html#a71a688c4016b7f74da02697627788724", null ],
+    [ "setupConnection", "client_8cpp.html#a744bfb764984d23c88f4cf880098e238", null ],
+    [ "clientSocket", "client_8cpp.html#adc5475d507e3d713ad405bbeb6eb41e7", null ],
+    [ "hints", "client_8cpp.html#ae56688bf50625537b553b45a9b68b808", null ],
+    [ "host", "client_8cpp.html#a90b19f2a1530ea0919bea0925d79f4c3", null ],
+    [ "lastDisqulifiedPlayer", "client_8cpp.html#ae287fe43172c63bc55bffc7b9dd3e48f", null ],
+    [ "lastMoveExecuted", "client_8cpp.html#aeddbeaec64e941414da8cbf350437650", null ],
+    [ "latestMessageType", "client_8cpp.html#a31646343fac034f4dc4d79dd764edc10", null ],
+    [ "map", "client_8cpp.html#a7bdaf8655b48f0d7994eb54ec1da4981", null ],
+    [ "res", "client_8cpp.html#a8df42e4f21cb586ea4981025137520e0", null ],
+    [ "searchDepth", "client_8cpp.html#aef69b20a57a9a3f2bd36ab2283c383ad", null ],
+    [ "serv_addr", "client_8cpp.html#ac724fe70ae8af2d1406927ee7b574a1b", null ],
+    [ "timeLimit", "client_8cpp.html#a9d6af6afa351f2096bf3ec1855e99aa5", null ]
+];

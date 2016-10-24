@@ -1,0 +1,163 @@
+\hypertarget{client_8h}{}\section{src/client.h File Reference}
+\label{client_8h}\index{src/client.\+h@{src/client.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include \char`\"{}map.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{client_8h_a744bfb764984d23c88f4cf880098e238}{setup\+Connection} (string ip, string port, uint8\+\_\+t $\ast$group\+Number)
+\item 
+void \hyperlink{client_8h_aaf912c696192e6a13eb70526891b4cd2}{close\+Connection} ()
+\item 
+uint8\+\_\+t \hyperlink{client_8h_aadd379d8bea5c41448de1784f879b319}{get\+Player\+Number} ()
+\item 
+\hyperlink{class_map}{Map} \hyperlink{client_8h_a75fdccf03f6263c4d18bb74d9e078b37}{get\+Map} ()
+\item 
+void \hyperlink{client_8h_a3e0441187d07ebec812f329d918fc61b}{listen\+To\+Server} ()
+\item 
+uint8\+\_\+t \hyperlink{client_8h_ab59b8db55efae8daf1dcc86e15e99360}{get\+Latest\+Message\+Type} ()
+\item 
+\hyperlink{struct_move}{Move} \hyperlink{client_8h_ab92f3b2e94f4ede0e0e49ffa3daafed1}{get\+Move} ()
+\item 
+uint8\+\_\+t \hyperlink{client_8h_a6240d46578b6987ff39c9c5c49699a82}{get\+Disqualified\+Player} ()
+\item 
+uint8\+\_\+t \hyperlink{client_8h_a89013cffb40765d2a361d97865899737}{get\+Search\+Depth} ()
+\item 
+uint32\+\_\+t \hyperlink{client_8h_a937ee7fcc4721e63d314e57f8b11356c}{get\+Time\+Limit} ()
+\item 
+void \hyperlink{client_8h_a71a688c4016b7f74da02697627788724}{send\+Move} (\hyperlink{struct_move}{Move} move)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{client.\+h@{client.\+h}!close\+Connection@{close\+Connection}}
+\index{close\+Connection@{close\+Connection}!client.\+h@{client.\+h}}
+\subsubsection[{\texorpdfstring{close\+Connection()}{closeConnection()}}]{\setlength{\rightskip}{0pt plus 5cm}void close\+Connection (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{client_8h_aaf912c696192e6a13eb70526891b4cd2}{}\label{client_8h_aaf912c696192e6a13eb70526891b4cd2}
+Closes the T\+CP connection to the server. \index{client.\+h@{client.\+h}!get\+Disqualified\+Player@{get\+Disqualified\+Player}}
+\index{get\+Disqualified\+Player@{get\+Disqualified\+Player}!client.\+h@{client.\+h}}
+\subsubsection[{\texorpdfstring{get\+Disqualified\+Player()}{getDisqualifiedPlayer()}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t get\+Disqualified\+Player (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{client_8h_a6240d46578b6987ff39c9c5c49699a82}{}\label{client_8h_a6240d46578b6987ff39c9c5c49699a82}
+Returns a player that got disqualified. listento\+Server() has to be called first and receive a message of type 7.
+
+\begin{DoxyReturn}{Returns}
+A player that got disqualified. 
+\end{DoxyReturn}
+\index{client.\+h@{client.\+h}!get\+Latest\+Message\+Type@{get\+Latest\+Message\+Type}}
+\index{get\+Latest\+Message\+Type@{get\+Latest\+Message\+Type}!client.\+h@{client.\+h}}
+\subsubsection[{\texorpdfstring{get\+Latest\+Message\+Type()}{getLatestMessageType()}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t get\+Latest\+Message\+Type (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{client_8h_ab59b8db55efae8daf1dcc86e15e99360}{}\label{client_8h_ab59b8db55efae8daf1dcc86e15e99360}
+Returns the type of the last received message from the server.
+
+\begin{DoxyReturn}{Returns}
+The type of the last received message from the server. 
+\end{DoxyReturn}
+\index{client.\+h@{client.\+h}!get\+Map@{get\+Map}}
+\index{get\+Map@{get\+Map}!client.\+h@{client.\+h}}
+\subsubsection[{\texorpdfstring{get\+Map()}{getMap()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Map} get\+Map (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{client_8h_a75fdccf03f6263c4d18bb74d9e078b37}{}\label{client_8h_a75fdccf03f6263c4d18bb74d9e078b37}
+\index{client.\+h@{client.\+h}!get\+Move@{get\+Move}}
+\index{get\+Move@{get\+Move}!client.\+h@{client.\+h}}
+\subsubsection[{\texorpdfstring{get\+Move()}{getMove()}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Move} get\+Move (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{client_8h_ab92f3b2e94f4ede0e0e49ffa3daafed1}{}\label{client_8h_ab92f3b2e94f4ede0e0e49ffa3daafed1}
+Returns a struct that contains the information of a move. listento\+Server() has to be called first and receive a message of type 6.
+
+\begin{DoxyReturn}{Returns}
+A struct that contains the information of a move. 
+\end{DoxyReturn}
+\index{client.\+h@{client.\+h}!get\+Player\+Number@{get\+Player\+Number}}
+\index{get\+Player\+Number@{get\+Player\+Number}!client.\+h@{client.\+h}}
+\subsubsection[{\texorpdfstring{get\+Player\+Number()}{getPlayerNumber()}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t get\+Player\+Number (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{client_8h_aadd379d8bea5c41448de1784f879b319}{}\label{client_8h_aadd379d8bea5c41448de1784f879b319}
+Returns the player number this AI gets assigned.
+
+\begin{DoxyReturn}{Returns}
+The player number this AI gets upon success, 0x\+FF otherwise. 
+\end{DoxyReturn}
+\index{client.\+h@{client.\+h}!get\+Search\+Depth@{get\+Search\+Depth}}
+\index{get\+Search\+Depth@{get\+Search\+Depth}!client.\+h@{client.\+h}}
+\subsubsection[{\texorpdfstring{get\+Search\+Depth()}{getSearchDepth()}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t get\+Search\+Depth (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{client_8h_a89013cffb40765d2a361d97865899737}{}\label{client_8h_a89013cffb40765d2a361d97865899737}
+Returns the search depth for the next move. listento\+Server() has to be called first and receive a message of type 4.
+
+\begin{DoxyReturn}{Returns}
+The search depth for the next move. 
+\end{DoxyReturn}
+\index{client.\+h@{client.\+h}!get\+Time\+Limit@{get\+Time\+Limit}}
+\index{get\+Time\+Limit@{get\+Time\+Limit}!client.\+h@{client.\+h}}
+\subsubsection[{\texorpdfstring{get\+Time\+Limit()}{getTimeLimit()}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t get\+Time\+Limit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{client_8h_a937ee7fcc4721e63d314e57f8b11356c}{}\label{client_8h_a937ee7fcc4721e63d314e57f8b11356c}
+Returns the search depth for the next move. listento\+Server() has to be called first and receive a message of type 4.
+
+\begin{DoxyReturn}{Returns}
+The time limit(in ms) for the next move. 
+\end{DoxyReturn}
+\index{client.\+h@{client.\+h}!listen\+To\+Server@{listen\+To\+Server}}
+\index{listen\+To\+Server@{listen\+To\+Server}!client.\+h@{client.\+h}}
+\subsubsection[{\texorpdfstring{listen\+To\+Server()}{listenToServer()}}]{\setlength{\rightskip}{0pt plus 5cm}void listen\+To\+Server (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{client_8h_a3e0441187d07ebec812f329d918fc61b}{}\label{client_8h_a3e0441187d07ebec812f329d918fc61b}
+Wait until the server sends a new message. \index{client.\+h@{client.\+h}!send\+Move@{send\+Move}}
+\index{send\+Move@{send\+Move}!client.\+h@{client.\+h}}
+\subsubsection[{\texorpdfstring{send\+Move(\+Move move)}{sendMove(Move move)}}]{\setlength{\rightskip}{0pt plus 5cm}void send\+Move (
+\begin{DoxyParamCaption}
+\item[{{\bf Move}}]{move}
+\end{DoxyParamCaption}
+)}\hypertarget{client_8h_a71a688c4016b7f74da02697627788724}{}\label{client_8h_a71a688c4016b7f74da02697627788724}
+Sends a move to the sever at the (x,y) coordinate with the information for choice and bonus cells
+
+
+\begin{DoxyParams}{Parameters}
+{\em \hyperlink{struct_move}{Move}} & -\/ A instance of a move struct that contains the information of the coordinates and type of move \\
+\hline
+\end{DoxyParams}
+\index{client.\+h@{client.\+h}!setup\+Connection@{setup\+Connection}}
+\index{setup\+Connection@{setup\+Connection}!client.\+h@{client.\+h}}
+\subsubsection[{\texorpdfstring{setup\+Connection(string ip, string port, uint8\+\_\+t $\ast$group\+Number)}{setupConnection(string ip, string port, uint8_t *groupNumber)}}]{\setlength{\rightskip}{0pt plus 5cm}bool setup\+Connection (
+\begin{DoxyParamCaption}
+\item[{string}]{ip, }
+\item[{string}]{port, }
+\item[{uint8\+\_\+t $\ast$}]{group\+Number}
+\end{DoxyParamCaption}
+)}\hypertarget{client_8h_a744bfb764984d23c88f4cf880098e238}{}\label{client_8h_a744bfb764984d23c88f4cf880098e238}
+Setup the socket connecting to a game server with the specified ip on the specified port. If no connection has been setup successfully, the result of every other function is undefined. A successful connection has to be closed with the \hyperlink{client_8cpp_aaf912c696192e6a13eb70526891b4cd2}{close\+Connection()} function at the end of the data transfer.
+
+
+\begin{DoxyParams}{Parameters}
+{\em ip} & -\/ Contains the ip of the server. \\
+\hline
+{\em port} & -\/ Contains the port on which the server listens. \\
+\hline
+{\em group\+Number} & -\/ Contains the group number of the team. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns true upon successfully setting up the socket connection, false otherwise. 
+\end{DoxyReturn}

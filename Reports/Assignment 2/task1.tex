@@ -1,0 +1,8 @@
+\section{Task 1}
+
+For the first task of this weeks assignment we did write the code to connect our AI to a game server. Therefore we had to write the code that connects to an ip address and the port on which the server is listening. \\
+
+During the setup phase a lot can go wrong, like not having the right ip or port or trying to connect to an offline server. To avoid any complications, we did try to catch every possible error and output a meaningful error message. After an unsuccessful connection attempt, our program will end itself as a controlled ending is better running under an undefined behaviour. And that way we can make sure that no memory leaks or open ports remain after the end of the program.\\
+
+After the connection has been set up successfully we retrieve our player number and the map. In the following part of the code, we try to separate the receiving of a message and the control of the game flow as much as possible. To archive this, we did create a \textbf{listenToSever()} method which will wait for a message of the server and set a variable to whatever message has been sent. After that it will decode and save the transferred data.\\
+In our main method we will take care of the game flow. First we ask which message was send last and then we execute the according code by using the data saved by the \textbf{listenToServer()} method. After a message has been processed, the AI is ready to get receive the next message. This will continue until the end of the game is announced by the server or an error accrued during the data transfer, to which our program would react with an controlled shutdown.

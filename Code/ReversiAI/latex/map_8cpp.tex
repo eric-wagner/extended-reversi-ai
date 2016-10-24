@@ -1,0 +1,82 @@
+\hypertarget{map_8cpp}{}\section{src/map.cpp File Reference}
+\label{map_8cpp}\index{src/map.\+cpp@{src/map.\+cpp}}
+{\ttfamily \#include \char`\"{}map.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{map_8cpp_a218fd926212287714b925060d809c7a5}{get\+Width} (void)
+\item 
+uint32\+\_\+t \hyperlink{map_8cpp_ad5d09e8c83658b92a8f3dad3c097676a}{get\+Height} (void)
+\item 
+uint32\+\_\+t \hyperlink{map_8cpp_a370d83d57a5d0007bd448c5efa225e93}{get\+Number\+Of\+Cell} (void)
+\item 
+void \hyperlink{map_8cpp_ae0d69026c2bdbc8c3fa6dcbc674d3070}{free\+Allocated\+Memory} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{map_8cpp_afef8c641f9572cc574801ad0feb8aa2f}{i\+Width}
+\item 
+uint32\+\_\+t \hyperlink{map_8cpp_ae8356d9cbc8cae35ecf57373dabaabf2}{i\+Height}
+\item 
+uint32\+\_\+t \hyperlink{map_8cpp_aa941fd383f950f00c98daccde6ead732}{i\+Cellcount}
+\item 
+int16\+\_\+t \hyperlink{map_8cpp_a36d8598eb3185ca5c3318f4226fb5bd6}{offset\+Map} \mbox{[}\hyperlink{map_8h_a0e9d4003787634607af9e97e14b9668b}{M\+A\+X\+\_\+\+W\+I\+D\+TH}\mbox{]}\mbox{[}\hyperlink{map_8h_a9059fa76eb5e8e86f870405d63e72c4c}{M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}\mbox{]}
+\item 
+\hyperlink{struct_cell}{Cell} $\ast$ \hyperlink{map_8cpp_ac87f36200d918157b4793453d1a18305}{existent\+Cell}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{map.\+cpp@{map.\+cpp}!free\+Allocated\+Memory@{free\+Allocated\+Memory}}
+\index{free\+Allocated\+Memory@{free\+Allocated\+Memory}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{free\+Allocated\+Memory(void)}{freeAllocatedMemory(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+Allocated\+Memory (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8cpp_ae0d69026c2bdbc8c3fa6dcbc674d3070}{}\label{map_8cpp_ae0d69026c2bdbc8c3fa6dcbc674d3070}
+\index{map.\+cpp@{map.\+cpp}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Height(void)}{getHeight(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t get\+Height (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{map_8cpp_ad5d09e8c83658b92a8f3dad3c097676a}{}\label{map_8cpp_ad5d09e8c83658b92a8f3dad3c097676a}
+Inlined getter function for height. \index{map.\+cpp@{map.\+cpp}!get\+Number\+Of\+Cell@{get\+Number\+Of\+Cell}}
+\index{get\+Number\+Of\+Cell@{get\+Number\+Of\+Cell}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Number\+Of\+Cell(void)}{getNumberOfCell(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t get\+Number\+Of\+Cell (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{map_8cpp_a370d83d57a5d0007bd448c5efa225e93}{}\label{map_8cpp_a370d83d57a5d0007bd448c5efa225e93}
+Inlined getter function for the number of cells. \index{map.\+cpp@{map.\+cpp}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Width(void)}{getWidth(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t get\+Width (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{map_8cpp_a218fd926212287714b925060d809c7a5}{}\label{map_8cpp_a218fd926212287714b925060d809c7a5}
+Inlined getter function for the width. 
+
+\subsection{Variable Documentation}
+\index{map.\+cpp@{map.\+cpp}!existent\+Cell@{existent\+Cell}}
+\index{existent\+Cell@{existent\+Cell}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{existent\+Cell}{existentCell}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cell}$\ast$ existent\+Cell}\hypertarget{map_8cpp_ac87f36200d918157b4793453d1a18305}{}\label{map_8cpp_ac87f36200d918157b4793453d1a18305}
+Contains all the neighbour and direction information of the cells of the board. Slots correlate with the board in the class \hyperlink{class_map}{Map}. \index{map.\+cpp@{map.\+cpp}!i\+Cellcount@{i\+Cellcount}}
+\index{i\+Cellcount@{i\+Cellcount}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+Cellcount}{iCellcount}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t i\+Cellcount}\hypertarget{map_8cpp_aa941fd383f950f00c98daccde6ead732}{}\label{map_8cpp_aa941fd383f950f00c98daccde6ead732}
+\index{map.\+cpp@{map.\+cpp}!i\+Height@{i\+Height}}
+\index{i\+Height@{i\+Height}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+Height}{iHeight}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t i\+Height}\hypertarget{map_8cpp_ae8356d9cbc8cae35ecf57373dabaabf2}{}\label{map_8cpp_ae8356d9cbc8cae35ecf57373dabaabf2}
+\index{map.\+cpp@{map.\+cpp}!i\+Width@{i\+Width}}
+\index{i\+Width@{i\+Width}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+Width}{iWidth}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t i\+Width}\hypertarget{map_8cpp_afef8c641f9572cc574801ad0feb8aa2f}{}\label{map_8cpp_afef8c641f9572cc574801ad0feb8aa2f}
+\index{map.\+cpp@{map.\+cpp}!offset\+Map@{offset\+Map}}
+\index{offset\+Map@{offset\+Map}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{offset\+Map}{offsetMap}}]{\setlength{\rightskip}{0pt plus 5cm}int16\+\_\+t offset\+Map\mbox{[}{\bf M\+A\+X\+\_\+\+W\+I\+D\+TH}\mbox{]}\mbox{[}{\bf M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}\mbox{]}}\hypertarget{map_8cpp_a36d8598eb3185ca5c3318f4226fb5bd6}{}\label{map_8cpp_a36d8598eb3185ca5c3318f4226fb5bd6}
+Contains the offset of the cell of the board (in class \hyperlink{class_map}{Map}) and existent\+Cell to the right cell. 

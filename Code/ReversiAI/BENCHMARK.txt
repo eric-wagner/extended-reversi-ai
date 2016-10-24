@@ -1,0 +1,533 @@
+START_MAP_RiseOfBattle.map
+DEPTH_2
+Node analysed: 				5
+Time taken: 				0 ms
+Average nodes per second:		-1 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	-nan %
+DEPTH_3
+Node analysed: 				9
+Time taken: 				0 ms
+Average nodes per second:		-1 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	-nan %
+DEPTH_4
+Node analysed: 				13
+Time taken: 				0 ms
+Average nodes per second:		-1 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	-nan %
+DEPTH_5
+Node analysed: 				15
+Time taken: 				0 ms
+Average nodes per second:		-1 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	-nan %
+START_MAP_RiseOfBattle_IG.map
+DEPTH_2
+Opening map file failed!
+DEPTH_3
+Opening map file failed!
+DEPTH_4
+Opening map file failed!
+DEPTH_5
+Opening map file failed!
+START_MAP_g8_3.map
+DEPTH_2
+Node analysed: 				194
+Time taken: 				1 ms
+Average nodes per second:		194000 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	0 %
+DEPTH_3
+Node analysed: 				404
+Time taken: 				1 ms
+Average nodes per second:		404000 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	0 %
+DEPTH_4
+Node analysed: 				735
+Time taken: 				2 ms
+Average nodes per second:		367500 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	0 %
+DEPTH_5
+Node analysed: 				1577
+Time taken: 				4 ms
+Average nodes per second:		394250 evaluations per second
+Time spend evaluating leafs:		1 ms
+Percentage of time spend evaluating:	25 %
+START_MAP_g8_3_IG.map
+DEPTH_2
+Node analysed: 				246
+Time taken: 				1 ms
+Average nodes per second:		246000 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	0 %
+DEPTH_3
+Node analysed: 				610
+Time taken: 				2 ms
+Average nodes per second:		305000 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	0 %
+DEPTH_4
+Node analysed: 				1188
+Time taken: 				3 ms
+Average nodes per second:		396000 evaluations per second
+Time spend evaluating leafs:		1 ms
+Percentage of time spend evaluating:	33.3333 %
+DEPTH_5
+Node analysed: 				3345
+Time taken: 				8 ms
+Average nodes per second:		418125 evaluations per second
+Time spend evaluating leafs:		3 ms
+Percentage of time spend evaluating:	37.5 %
+START_MAP_g5_3.map
+DEPTH_2
+Node analysed: 				406
+Time taken: 				1 ms
+Average nodes per second:		406000 evaluations per second
+Time spend evaluating leafs:		1 ms
+Percentage of time spend evaluating:	100 %
+DEPTH_3
+Node analysed: 				827
+Time taken: 				3 ms
+Average nodes per second:		275667 evaluations per second
+Time spend evaluating leafs:		1 ms
+Percentage of time spend evaluating:	33.3333 %
+DEPTH_4
+Node analysed: 				2106
+Time taken: 				10 ms
+Average nodes per second:		210600 evaluations per second
+Time spend evaluating leafs:		6 ms
+Percentage of time spend evaluating:	60 %
+DEPTH_5
+Node analysed: 				10100
+Time taken: 				45 ms
+Average nodes per second:		224444 evaluations per second
+Time spend evaluating leafs:		23 ms
+Percentage of time spend evaluating:	51.1111 %
+START_MAP_g5_3_IG.map
+DEPTH_2
+Node analysed: 				9863
+Time taken: 				35 ms
+Average nodes per second:		281800 evaluations per second
+Time spend evaluating leafs:		27 ms
+Percentage of time spend evaluating:	77.1429 %
+DEPTH_3
+Node analysed: 				67492
+Time taken: 				216 ms
+Average nodes per second:		312463 evaluations per second
+Time spend evaluating leafs:		173 ms
+Percentage of time spend evaluating:	80.0926 %
+DEPTH_4
+Node analysed: 				217935
+Time taken: 				3090 ms
+Average nodes per second:		70529.1 evaluations per second
+Time spend evaluating leafs:		453 ms
+Percentage of time spend evaluating:	14.6602 %
+DEPTH_5
+Node analysed: 				469112
+Time taken: 				10771 ms
+Average nodes per second:		43553.2 evaluations per second
+Time spend evaluating leafs:		761 ms
+Percentage of time spend evaluating:	7.06527 %
+START_MAP_g5_1.map
+DEPTH_2
+Node analysed: 				2576
+Time taken: 				12 ms
+Average nodes per second:		214667 evaluations per second
+Time spend evaluating leafs:		10 ms
+Percentage of time spend evaluating:	83.3333 %
+DEPTH_3
+Node analysed: 				5292
+Time taken: 				26 ms
+Average nodes per second:		203538 evaluations per second
+Time spend evaluating leafs:		19 ms
+Percentage of time spend evaluating:	73.0769 %
+DEPTH_4
+Node analysed: 				16137
+Time taken: 				65 ms
+Average nodes per second:		248262 evaluations per second
+Time spend evaluating leafs:		49 ms
+Percentage of time spend evaluating:	75.3846 %
+DEPTH_5
+Node analysed: 				162364
+Time taken: 				557 ms
+Average nodes per second:		291497 evaluations per second
+Time spend evaluating leafs:		392 ms
+Percentage of time spend evaluating:	70.377 %
+START_MAP_g5_1_IG.map
+DEPTH_2
+Node analysed: 				6531
+Time taken: 				22 ms
+Average nodes per second:		296864 evaluations per second
+Time spend evaluating leafs:		15 ms
+Percentage of time spend evaluating:	68.1818 %
+DEPTH_3
+Node analysed: 				28956
+Time taken: 				88 ms
+Average nodes per second:		329045 evaluations per second
+Time spend evaluating leafs:		62 ms
+Percentage of time spend evaluating:	70.4545 %
+DEPTH_4
+Node analysed: 				3048556
+Time taken: 				8532 ms
+Average nodes per second:		357308 evaluations per second
+Time spend evaluating leafs:		6470 ms
+Percentage of time spend evaluating:	75.8322 %
+DEPTH_5
+START_MAP_g3_2.map
+DEPTH_2
+Node analysed: 				3567
+Time taken: 				19 ms
+Average nodes per second:		187737 evaluations per second
+Time spend evaluating leafs:		15 ms
+Percentage of time spend evaluating:	78.9474 %
+DEPTH_3
+Node analysed: 				9298
+Time taken: 				40 ms
+Average nodes per second:		232450 evaluations per second
+Time spend evaluating leafs:		29 ms
+Percentage of time spend evaluating:	72.5 %
+DEPTH_4
+Node analysed: 				112529
+Time taken: 				444 ms
+Average nodes per second:		253444 evaluations per second
+Time spend evaluating leafs:		344 ms
+Percentage of time spend evaluating:	77.4775 %
+DEPTH_5
+Node analysed: 				4518926
+Time taken: 				17942 ms
+Average nodes per second:		251863 evaluations per second
+Time spend evaluating leafs:		13926 ms
+Percentage of time spend evaluating:	77.6168 %
+START_MAP_g3_2_IG.map
+DEPTH_2
+Node analysed: 				4301
+Time taken: 				19 ms
+Average nodes per second:		226368 evaluations per second
+Time spend evaluating leafs:		5 ms
+Percentage of time spend evaluating:	26.3158 %
+DEPTH_3
+Node analysed: 				36497
+Time taken: 				156 ms
+Average nodes per second:		233955 evaluations per second
+Time spend evaluating leafs:		106 ms
+Percentage of time spend evaluating:	67.9487 %
+DEPTH_4
+Node analysed: 				227579
+Time taken: 				887 ms
+Average nodes per second:		256572 evaluations per second
+Time spend evaluating leafs:		671 ms
+Percentage of time spend evaluating:	75.6483 %
+DEPTH_5
+Node analysed: 				59475951
+Time taken: 				224163 ms
+Average nodes per second:		265325 evaluations per second
+Time spend evaluating leafs:		172792 ms
+Percentage of time spend evaluating:	77.0832 %
+START_MAP_FunnelOfDeath.map
+DEPTH_2
+Node analysed: 				11366
+Time taken: 				119 ms
+Average nodes per second:		95512.6 evaluations per second
+Time spend evaluating leafs:		101 ms
+Percentage of time spend evaluating:	84.8739 %
+DEPTH_3
+Node analysed: 				45263
+Time taken: 				443 ms
+Average nodes per second:		102174 evaluations per second
+Time spend evaluating leafs:		374 ms
+Percentage of time spend evaluating:	84.4244 %
+DEPTH_4
+Node analysed: 				3387472
+Time taken: 				33206 ms
+Average nodes per second:		102014 evaluations per second
+Time spend evaluating leafs:		28060 ms
+Percentage of time spend evaluating:	84.5028 %
+DEPTH_5
+START_MAP_FunnelOfDeath_IG.map
+DEPTH_2
+Node analysed: 				33978
+Time taken: 				309 ms
+Average nodes per second:		109961 evaluations per second
+Time spend evaluating leafs:		238 ms
+Percentage of time spend evaluating:	77.0227 %
+DEPTH_3
+Node analysed: 				314649
+Time taken: 				2713 ms
+Average nodes per second:		115978 evaluations per second
+Time spend evaluating leafs:		2217 ms
+Percentage of time spend evaluating:	81.7177 %
+DEPTH_4
+Node analysed: 				152104941
+Time taken: 				1282894 ms
+Average nodes per second:		118564 evaluations per second
+Time spend evaluating leafs:		1060813 ms
+Percentage of time spend evaluating:	82.6891 %
+DEPTH_5
+START_MAP_RiseOfBattle.map
+DEPTH_2
+Node analysed: 				2
+Time taken: 				0 ms
+Average nodes per second:		-1 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	-nan %
+DEPTH_3
+Node analysed: 				3
+Time taken: 				0 ms
+Average nodes per second:		-1 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	-nan %
+DEPTH_4
+Node analysed: 				4
+Time taken: 				0 ms
+Average nodes per second:		-1 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	-nan %
+DEPTH_5
+Node analysed: 				5
+Time taken: 				0 ms
+Average nodes per second:		-1 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	-nan %
+START_MAP_RiseOfBattle_IG.map
+DEPTH_2
+Opening map file failed!
+DEPTH_3
+Opening map file failed!
+DEPTH_4
+Opening map file failed!
+DEPTH_5
+Opening map file failed!
+START_MAP_g8_3.map
+DEPTH_2
+Node analysed: 				55
+Time taken: 				1 ms
+Average nodes per second:		55000 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	0 %
+DEPTH_3
+Node analysed: 				159
+Time taken: 				0 ms
+Average nodes per second:		-1 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	-nan %
+DEPTH_4
+Node analysed: 				389
+Time taken: 				1 ms
+Average nodes per second:		389000 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	0 %
+DEPTH_5
+Node analysed: 				1837
+Time taken: 				5 ms
+Average nodes per second:		367400 evaluations per second
+Time spend evaluating leafs:		2 ms
+Percentage of time spend evaluating:	40 %
+START_MAP_g8_3_IG.map
+DEPTH_2
+Node analysed: 				135
+Time taken: 				1 ms
+Average nodes per second:		135000 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	0 %
+DEPTH_3
+Node analysed: 				542
+Time taken: 				2 ms
+Average nodes per second:		271000 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	0 %
+DEPTH_4
+Node analysed: 				1257
+Time taken: 				3 ms
+Average nodes per second:		419000 evaluations per second
+Time spend evaluating leafs:		1 ms
+Percentage of time spend evaluating:	33.3333 %
+DEPTH_5
+Node analysed: 				4182
+Time taken: 				12 ms
+Average nodes per second:		348500 evaluations per second
+Time spend evaluating leafs:		7 ms
+Percentage of time spend evaluating:	58.3333 %
+START_MAP_g5_3.map
+DEPTH_2
+Node analysed: 				66
+Time taken: 				0 ms
+Average nodes per second:		-1 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	-nan %
+DEPTH_3
+Node analysed: 				204
+Time taken: 				1 ms
+Average nodes per second:		204000 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	0 %
+DEPTH_4
+Node analysed: 				871
+Time taken: 				4 ms
+Average nodes per second:		217750 evaluations per second
+Time spend evaluating leafs:		1 ms
+Percentage of time spend evaluating:	25 %
+DEPTH_5
+Node analysed: 				2157
+Time taken: 				13 ms
+Average nodes per second:		165923 evaluations per second
+Time spend evaluating leafs:		5 ms
+Percentage of time spend evaluating:	38.4615 %
+START_MAP_g5_3_IG.map
+DEPTH_2
+Node analysed: 				318
+Time taken: 				2 ms
+Average nodes per second:		159000 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	0 %
+DEPTH_3
+Node analysed: 				45797
+Time taken: 				147 ms
+Average nodes per second:		311544 evaluations per second
+Time spend evaluating leafs:		118 ms
+Percentage of time spend evaluating:	80.2721 %
+DEPTH_4
+Node analysed: 				228033
+Time taken: 				2565 ms
+Average nodes per second:		88901.8 evaluations per second
+Time spend evaluating leafs:		493 ms
+Percentage of time spend evaluating:	19.2203 %
+DEPTH_5
+Node analysed: 				973136
+Time taken: 				11375 ms
+Average nodes per second:		85550.4 evaluations per second
+Time spend evaluating leafs:		1964 ms
+Percentage of time spend evaluating:	17.2659 %
+START_MAP_g5_1.map
+DEPTH_2
+Node analysed: 				233
+Time taken: 				1 ms
+Average nodes per second:		233000 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	0 %
+DEPTH_3
+Node analysed: 				1431
+Time taken: 				5 ms
+Average nodes per second:		286200 evaluations per second
+Time spend evaluating leafs:		3 ms
+Percentage of time spend evaluating:	60 %
+DEPTH_4
+Node analysed: 				20161
+Time taken: 				69 ms
+Average nodes per second:		292188 evaluations per second
+Time spend evaluating leafs:		48 ms
+Percentage of time spend evaluating:	69.5652 %
+DEPTH_5
+Node analysed: 				377556
+Time taken: 				1243 ms
+Average nodes per second:		303746 evaluations per second
+Time spend evaluating leafs:		879 ms
+Percentage of time spend evaluating:	70.716 %
+START_MAP_g5_1_IG.map
+DEPTH_2
+Node analysed: 				506
+Time taken: 				1 ms
+Average nodes per second:		506000 evaluations per second
+Time spend evaluating leafs:		1 ms
+Percentage of time spend evaluating:	100 %
+DEPTH_3
+Node analysed: 				11684
+Time taken: 				38 ms
+Average nodes per second:		307474 evaluations per second
+Time spend evaluating leafs:		27 ms
+Percentage of time spend evaluating:	71.0526 %
+DEPTH_4
+Node analysed: 				5173381
+Time taken: 				14469 ms
+Average nodes per second:		357549 evaluations per second
+Time spend evaluating leafs:		11034 ms
+Percentage of time spend evaluating:	76.2596 %
+DEPTH_5
+START_MAP_g3_2.map
+DEPTH_2
+Node analysed: 				189
+Time taken: 				2 ms
+Average nodes per second:		94500 evaluations per second
+Time spend evaluating leafs:		0 ms
+Percentage of time spend evaluating:	0 %
+DEPTH_3
+Node analysed: 				1446
+Time taken: 				10 ms
+Average nodes per second:		144600 evaluations per second
+Time spend evaluating leafs:		4 ms
+Percentage of time spend evaluating:	40 %
+DEPTH_4
+Node analysed: 				32540
+Time taken: 				132 ms
+Average nodes per second:		246515 evaluations per second
+Time spend evaluating leafs:		96 ms
+Percentage of time spend evaluating:	72.7273 %
+DEPTH_5
+Node analysed: 				926751
+Time taken: 				3687 ms
+Average nodes per second:		251356 evaluations per second
+Time spend evaluating leafs:		2750 ms
+Percentage of time spend evaluating:	74.5864 %
+START_MAP_g3_2_IG.map
+DEPTH_2
+Node analysed: 				593
+Time taken: 				12 ms
+Average nodes per second:		49416.7 evaluations per second
+Time spend evaluating leafs:		1 ms
+Percentage of time spend evaluating:	8.33333 %
+DEPTH_3
+Node analysed: 				122369
+Time taken: 				500 ms
+Average nodes per second:		244738 evaluations per second
+Time spend evaluating leafs:		389 ms
+Percentage of time spend evaluating:	77.8 %
+DEPTH_4
+Node analysed: 				31986743
+Time taken: 				124358 ms
+Average nodes per second:		257215 evaluations per second
+Time spend evaluating leafs:		98487 ms
+Percentage of time spend evaluating:	79.1964 %
+DEPTH_5
+START_MAP_FunnelOfDeath.map
+DEPTH_2
+Node analysed: 				497
+Time taken: 				6 ms
+Average nodes per second:		82833.3 evaluations per second
+Time spend evaluating leafs:		4 ms
+Percentage of time spend evaluating:	66.6667 %
+DEPTH_3
+Node analysed: 				40184
+Time taken: 				412 ms
+Average nodes per second:		97534 evaluations per second
+Time spend evaluating leafs:		351 ms
+Percentage of time spend evaluating:	85.1942 %
+DEPTH_4
+Node analysed: 				9965199
+Time taken: 				97314 ms
+Average nodes per second:		102403 evaluations per second
+Time spend evaluating leafs:		81880 ms
+Percentage of time spend evaluating:	84.14 %
+DEPTH_5
+START_MAP_FunnelOfDeath_IG.map
+DEPTH_2
+Node analysed: 				869
+Time taken: 				11 ms
+Average nodes per second:		79000 evaluations per second
+Time spend evaluating leafs:		6 ms
+Percentage of time spend evaluating:	54.5455 %
+DEPTH_3
+Node analysed: 				428949
+Time taken: 				3647 ms
+Average nodes per second:		117617 evaluations per second
+Time spend evaluating leafs:		3009 ms
+Percentage of time spend evaluating:	82.5062 %
+DEPTH_4
+Node analysed: 				297799272
+Time taken: 				2503409 ms
+Average nodes per second:		118957 evaluations per second
+Time spend evaluating leafs:		2072993 ms
+Percentage of time spend evaluating:	82.8068 %
+DEPTH_5

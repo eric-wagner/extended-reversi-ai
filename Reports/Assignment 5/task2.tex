@@ -1,0 +1,33 @@
+\section{Task 2 \\ Optimisation of Bombing Phase}
+
+Compared to the first evaluation method we implemented for task 2 of assignment 2 our evaluation changed completely.
+Back then we used the formula\\
+\[ {\displaystyle Ranking(p) = \frac{|p \text{ } stones|^x}{|enemy \text{ } bombs|^y * explosionradius^z * rank(p) * clustering}} \] for player $p$ with $x$, $y$ and $z$ being different weights. 
+By adjusting the weights we searched for the best overall results.
+One of the problems we encountered with this evaluation function was that we can not do anything about the clustering of our stones.
+Furthermore it takes quite some time to check the neighbours for each stone. \\\\
+Now, we compare the amount of stones we own more directly with the other players' amount.
+%I do not get the meaning of the following outcommented sentence:
+%"'We count the number of stones for each player, with mores stones then we have, have and of the players, with equal or less stones then we have, have."'
+Our new formula for the bombing evaluation is:
+\[ Ranking(p) = \left\{
+\begin{array}{ll}
+(|p \text{ } stones|*(|players|-1))-stonesAbove  & \mbox{if } stonesAbove>0 \\\\
+(MAX\_WIDTH*MAX\_HEIGHT)+\\(|p \text{ } stones|*(|players|-1))-stonesBelow & \mbox{else}
+\end{array}
+\right. \]
+We only have to iterate once over all existing stones to count the stones owned by each player, and then iterate once over all players to check if they have more stones than we do. 
+Those are added up in 3 variables: stones owned by \emph{ourself}, stones owned by \emph{players above us}(=having more stones than we do), and stones owned by \emph{players below us}(=having less stones than we do). Disqualified players get ignored for the number of stones players have above and below us.
+For a bomb move we want to maximise our amount of stones on the map while minimising the other players' stones. If there are players with more stones than we own, we will focus them.\\\\
+As we mark a stone as destroyed(=non-existent) by setting its state value to the max-value, we have to iterate over all stones that once existed.
+For that reason the number of stones iterated through is constant. 
+We see no efficient way to change this, because while creating the map we saved every existing stone into an array over which we iterate. \\\newpage
+Moves that will improve the rank in the ladder of a player by bombing stones of a specific other player, will get preferred by the search tree.
+This is the case because if throw a bomb that will result in us moving up a place in the ranking, the count of the stones of players above us does not only go down by the amount of stones bombed, but by the total of stones owned by that player plus the stones of other players that we bombed.
+On the other hand if there is no move that will improve the rank, the search tree will chose a move that will bomb in a fashion that closes the gap between the number of stones from the player and the stones from players with more stones then him. To make sure that a state where we are in the leading position always gets recognized as better, we add a constant of $(MAX\_WIDTH*MAX\_WIDTH)$ to the score. This value is higher than any result of the first part of the evaluation function.\\\\
+The method, which checks if a move in the bomb phase is valid, was changed while a prior assignment. 
+It used the depth first search algorithm that marks all the stones as to be destroyed.
+After all stones were marked, we iterated over all stones and destroyed the stones which were marked for it. \\
+The search algorithm we use now is a variation of depth first algorithm. We mark all stones to be destroyed and added how many steps were taken from the starting stones to get to the stone.
+If a stone was already marked to get destroyed, the search algorithm will only check that stone and all it's successors if the steps taken to get to that stone is lower in the current run of the search tree. \\
+That way we save checking some stones multiple times.

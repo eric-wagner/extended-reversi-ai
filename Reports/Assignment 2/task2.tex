@@ -1,0 +1,69 @@
+\section{Task 2}
+
+We implemented the evaluation method of the bombing phase. \\
+If there are no bombs left, it uses the following functions: \\
+$Ranking(player) = \begin{cases} 
+				MAX & \mbox{if } Rank = 1 \\
+				MIN + |\text{Players}| - Rank(payer) 	& \mbox{else}
+		  \end{cases}$\\
+Rank is function that returns the ranking of the player, where 1 is first place, 2 the second place and so on.  $|\text{Players}|$ is the total number of players, that aren't yet disqualified. \\
+The reason why the function is not $Ranking(player) = MAX - Rank(player)$ is, that the search tree possible hasn't the same depth everywhere and may even start in the first phase and continue into the second phase. If the last place would be higher then an average rank from the function, that evaluates the board when the game isn't over, then the algorithmen that uses the search tree will try to achieve that finishing position no matter how good or bad it may be. \\
+
+\noindent Otherwise the game isn't over yet. If that is the case we use the following function to evaluate the board of the player: \\
+$ Ranking(player) = \frac{|player \text{ } stones|^x}{|enemy \text{ } bombs|^y * explosionradius^z * Rank(player) * clustering} $ \\
+$x,y$ and $z$ are weights that will be changed on a regular basis to make the evaluation as good as possible. $clustering$ is the number of cells of the player that are adjacent to each other.\\
+This formula may change if a better one will be found or thought of in later stages of the programming.\\
+
+\noindent Now to the question if the method is time efficient. To be able to compare better, we first make the following assumptions:
+\begin{itemize}
+	\item Bomb evaluation method only gets called in phase two of the game.
+	\item The whole board are only valid stones at the beginning of phase two.
+	\item All cells are captured by not disqualified players.
+	\item The operations checking and increasing, checking and decreasing, copying and counting take the same amount of time.
+\end{itemize}
+
+\noindent Here are the two possibilities that seemed most likely:
+\begin{enumerate}
+	\item Count the number of cells that each player has at the beginning of phase. 
+	\item Count the cells each time again.
+\end{enumerate}
+
+\noindent First let us look at the things each of those methods has to do and therefore can get ignored.\\
+\begin{itemize}
+	\item Check if there are any bombs left to check if the first ranking function should be used.
+	\item Sort the number of cell each player has to get the rank of the player.
+	\item Half of the tree are leaves.
+	\item Out of simplicity: The number of bombs gets counted each method call again.
+\end{itemize}
+
+\noindent Now let us look at the differences: \\
+
+\begin{tabular}{p{7cm}|p{7cm}}
+	\textbf{Method 1} & \textbf{Method 2} \\ \hline
+	\begin{itemize}
+		\item Count the number of cells of each player at the beginning of phase two.
+		\item Deduct the number of destroyed cells from the according players when a bomb is dropped.
+		\item The number of bombs of each player gets copied with each board copy.
+	\end{itemize}
+	&
+	\begin{itemize}
+		\item Count the number of cells of each player at each evaluation call.
+		\item Only has to count when the functions gets called in a leaf.
+	\end{itemize}
+\end{tabular} 
+\mbox{ }\\
+The number of operations of the methods accumulate to the following terms:
+\begin{enumerate}
+	\item NumCells + NumBombs * (2 * RadiusBomb + 1)$^2$ \\ + NumPlayers * NumCopies
+	\item NumCells * NumLeaves
+\end{enumerate}
+Note that the NumCells stays the same the whole game, because they only get marked as destroyed. \\
+$\prod\limits_{j = 0}^{\text{NumBombs}} NumCells - j * (2 * RadiusBomb + 1)$ where \\ $0 < NumCells - j * (2 * RadiusBomb + 1)$ calculates most of the possible moves but obviously not all. If you assume that one percent of those are checked and half of the checked ones are leaves you get the following: \\
+$NumOfCopies = [\prod\limits_{j = 0}^{\text{NumBombs}} NumCells - j * (2 * RadiusBomb + 1)] \div 100$ where \\ $0 < NumCells - j * (2 * RadiusBomb + 1)$\\
+
+ $NumLeaves = NumCopies \div 2$ \\
+ 
+If a board is 900 cells big, about 18 bombs destroy most of that board and are the boarder for $j$ in the calculation of NumOfCopies. So NumCells = 900 and NumCopies $\approx 10^{46}$. Thus NumLeaves $\approx 5*10^{45}$. If you look at how big those numbers are, you can see the potential irrelevance of NumCells + NumBombs * (2 * RadiusBomb + 1)$^2$. If you calculate the number of operations with 6 players you get the following:
+$$ \text{Method 1} \approx 6 * 10^{46} \hspace{30px} \text{Method 2} \approx 4,5*10^{48} $$
+In other words method 1 saves a lot of operations, so why do we use method 2 instead of method 1? \\
+At this point it is not clear if switching to method 1 is worth it, because we would have to change mid game, when the first time the bomb evaluation gets called, into a second class or extend the current class that contains the map information with the number of cells that remain. Using the same class for phase 1 and 2 would add copy operations for each copy in phase 1 also, which would raise the number of operations for method 1 above method 2. An advantage of splitting it into a second class would be that we could remove the information if a cell got deleted out of the phase 1 class that will be currently be copied in every copy of our map in phase 1.

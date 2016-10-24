@@ -1,0 +1,30 @@
+\hypertarget{struct_cell}{}\section{Cell Struct Reference}
+\label{struct_cell}\index{Cell@{Cell}}
+
+
+{\ttfamily \#include $<$map.\+h$>$}
+
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint8\+\_\+t \hyperlink{struct_cell_a8740ff58f9f8259d73d481b02fed3e2d}{direction} \mbox{[}8\mbox{]}
+\item 
+uint16\+\_\+t \hyperlink{struct_cell_aa2d9a76a979ee132fe05781b73057e53}{neighbour} \mbox{[}8\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Contains the transitions of the tile to all of its neighbors. The following values of the direction have the following meaning. 701 The X represents the tile. The values represent in which array slot 6\+X2 you have to chose to get into that direction. 543 The direction saves the direction you come from when transiting to the tile in the direction you go to, that depends on the on array slot. 
+
+\subsection{Member Data Documentation}
+\index{Cell@{Cell}!direction@{direction}}
+\index{direction@{direction}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{direction}{direction}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t Cell\+::direction\mbox{[}8\mbox{]}}\hypertarget{struct_cell_a8740ff58f9f8259d73d481b02fed3e2d}{}\label{struct_cell_a8740ff58f9f8259d73d481b02fed3e2d}
+\index{Cell@{Cell}!neighbour@{neighbour}}
+\index{neighbour@{neighbour}!Cell@{Cell}}
+\subsubsection[{\texorpdfstring{neighbour}{neighbour}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t Cell\+::neighbour\mbox{[}8\mbox{]}}\hypertarget{struct_cell_aa2d9a76a979ee132fe05781b73057e53}{}\label{struct_cell_aa2d9a76a979ee132fe05781b73057e53}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{map_8h}{map.\+h}\end{DoxyCompactItemize}

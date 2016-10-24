@@ -1,0 +1,340 @@
+\hypertarget{algorithms_8cpp}{}\section{src/algorithms.cpp File Reference}
+\label{algorithms_8cpp}\index{src/algorithms.\+cpp@{src/algorithms.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$sys/time.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$signal.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$iterator$>$}\\*
+{\ttfamily \#include $<$atomic$>$}\\*
+{\ttfamily \#include $<$climits$>$}\\*
+{\ttfamily \#include $<$map$>$}\\*
+{\ttfamily \#include \char`\"{}algorithms.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}map.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{algorithms_8cpp_a62f78e286b0551c4518094c4da03a224}{minimax} (\hyperlink{class_map}{Map} \&\hyperlink{client_8cpp_a7bdaf8655b48f0d7994eb54ec1da4981}{map}, int turn, int depth, bool is\+Playing\+Phase)
+\item 
+int \hyperlink{algorithms_8cpp_a8750c9c2c123eab82cbbafd475ceebc7}{alphabeta} (\hyperlink{class_map}{Map} \&\hyperlink{client_8cpp_a7bdaf8655b48f0d7994eb54ec1da4981}{map}, int turn, int depth, bool is\+Playing\+Phase, int alpha, int beta)
+\item 
+int \hyperlink{algorithms_8cpp_a8052260a8f0da9cff66eab24ed1b9650}{move\+Sorting\+\_\+first\+Ite} (\hyperlink{class_map}{Map} \&\hyperlink{client_8cpp_a7bdaf8655b48f0d7994eb54ec1da4981}{map}, int turn, multimap$<$ int, int $>$ $\ast$next\+Moves, bool is\+Playing\+Phase)
+\item 
+int \hyperlink{algorithms_8cpp_ab0176746c9b4429680e811ab245bbf18}{move\+Sorting} (\hyperlink{class_map}{Map} \&\hyperlink{client_8cpp_a7bdaf8655b48f0d7994eb54ec1da4981}{map}, int \hyperlink{_reversi_a_i_8cpp_ae41164029686cac80f7f6bd7aa23b153}{player}, int current\+Depth, int alpha, int beta, multimap$<$ int, int $>$ $\ast$cur\+Moves, multimap$<$ int, int $>$ $\ast$next\+Moves, bool is\+Playing\+Phase)
+\item 
+void \hyperlink{algorithms_8cpp_a63b77c555dd9a8bd02a25fbdc6e68ec0}{timer\+Handler} (int signum)
+\item 
+void \hyperlink{algorithms_8cpp_a5a7931957f8a5298b3982cab604da1ee}{init\+Timer} ()
+\item 
+\hyperlink{struct_move}{Move} $\ast$ \hyperlink{algorithms_8cpp_a3a3eb3c3839a67dfdb847cdbd38248bc}{get\+Next\+Move} (\hyperlink{class_map}{Map} \&\hyperlink{client_8cpp_a7bdaf8655b48f0d7994eb54ec1da4981}{map}, int \hyperlink{client_8cpp_aef69b20a57a9a3f2bd36ab2283c383ad}{search\+Depth}, int \hyperlink{algorithms_8cpp_a9f67c039ba7c7286f110dc84f901b4e4}{search\+Time}, int \hyperlink{_reversi_a_i_8cpp_ae41164029686cac80f7f6bd7aa23b153}{player}, int algorithm, bool is\+Playing\+Phase)
+\item 
+uint64\+\_\+t \hyperlink{algorithms_8cpp_a73cb7859475835f9d7612994cd62dc5f}{get\+Number\+Of\+Analyzed\+Nodes} ()
+\item 
+long \hyperlink{algorithms_8cpp_ae469ffd1d8802da7eb4460fbea0ff5a4}{get\+Time\+Spend\+Evaluating} ()
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+struct timespec \hyperlink{algorithms_8cpp_a6d17f55233303ccdf416b967e2550599}{spec}
+\item 
+long \hyperlink{algorithms_8cpp_a9d25e301cac234ba0a5f7c7d4df0cf66}{time\+Spend\+Evaluating} =0
+\item 
+long \hyperlink{algorithms_8cpp_a8ad49a66e91d8658c5f1f7dbcbcbbd2f}{start\+Time}
+\item 
+long \hyperlink{algorithms_8cpp_a22ab9604e2a95f2750f1418182f6ec4a}{end\+Time}
+\item 
+uint64\+\_\+t \hyperlink{algorithms_8cpp_a506ddaf026167e3d51783c0821ba15f4}{nodes\+Analyzed} = 0
+\item 
+\hyperlink{struct_move}{Move} \hyperlink{algorithms_8cpp_a828c61171a09c044835287b7bacd4609}{best\+Move}
+\item 
+double const \hyperlink{algorithms_8cpp_a27ba6ca336bd67144a13eda6610c20b7}{window\+Size} = 5
+\item 
+double const \hyperlink{algorithms_8cpp_a7a6f5dce9a978d029b0e1b53704aad0f}{window\+Resize} = 20
+\item 
+bool \hyperlink{algorithms_8cpp_a283948b053f6bffecb669a20d4155fc3}{was\+Window\+Succesfull} =false
+\item 
+int \hyperlink{algorithms_8cpp_ab6d19d7a7d95dd561c9961cb9758c53e}{current\+Choice} =0
+\item 
+int \hyperlink{algorithms_8cpp_afa68e2cbb976c9635ace78cab8b9649f}{current\+Cell} =0
+\item 
+int \hyperlink{algorithms_8cpp_a5f208f3e6ce82d74980b8a795838e4b7}{number\+Of\+Players}
+\item 
+int \hyperlink{algorithms_8cpp_a2b665d11fab037e5840f1a3c300f54eb}{initial\+Depth} =0
+\item 
+int \hyperlink{algorithms_8cpp_a197db7ad117c560f318c1da8cef96fec}{player\+ID} =0
+\item 
+long \hyperlink{algorithms_8cpp_a9f67c039ba7c7286f110dc84f901b4e4}{search\+Time}
+\item 
+long \hyperlink{algorithms_8cpp_a3946d6b7669d3d1291cc4a9152af3ea5}{search\+Start}
+\item 
+long \hyperlink{algorithms_8cpp_a6b7b2e55302348074b63cf876c897c59}{current\+Time}
+\item 
+int \hyperlink{algorithms_8cpp_a3ec15529c4681f5a256d6f9c7820bd09}{next\+Player} =0
+\item 
+struct sigaction \hyperlink{algorithms_8cpp_aae6d913766d5e5bc6823dd0c1627ef31}{sa}
+\item 
+struct itimerval \hyperlink{algorithms_8cpp_ad5554d1fe5a08cd896918dee210cd4a1}{timer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!alphabeta@{alphabeta}}
+\index{alphabeta@{alphabeta}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{alphabeta(\+Map \&map, int turn, int depth, bool is\+Playing\+Phase, int alpha, int beta)}{alphabeta(Map &map, int turn, int depth, bool isPlayingPhase, int alpha, int beta)}}]{\setlength{\rightskip}{0pt plus 5cm}int alphabeta (
+\begin{DoxyParamCaption}
+\item[{{\bf Map} \&}]{map, }
+\item[{int}]{turn, }
+\item[{int}]{depth, }
+\item[{bool}]{is\+Playing\+Phase, }
+\item[{int}]{alpha, }
+\item[{int}]{beta}
+\end{DoxyParamCaption}
+)}\hypertarget{algorithms_8cpp_a8750c9c2c123eab82cbbafd475ceebc7}{}\label{algorithms_8cpp_a8750c9c2c123eab82cbbafd475ceebc7}
+Execute minimax with alphabeta pruning to a specified depth. If the timer for the move runs out, 0 is returned immediately. For alphabeta pruning every node has the information which is the minimal(in case of minimizer nodes) or the maximal(in case of maximizer nodes) value of its parent node. While building its subtree, it constantly checks whether its value is higher than the reference value(if parent=minimizer) or lower otherwise. If this is the case, the node returns immediatly and the subtree is pruned away.
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & -\/ The initial game state \\
+\hline
+{\em turn} & -\/ The player who has to make a move \\
+\hline
+{\em depth} & -\/ Specifies to what depth the game tree should be built \\
+\hline
+{\em is\+Playing\+Phase} & -\/ Specifies in which phase of the game currently is active \\
+\hline
+{\em alpha} & -\/ The currently highest value of a parent maximizer \\
+\hline
+{\em beta} & -\/ The currently lowest value of a parant minimizer\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The minimal value of all child nodes in case of minimizer, the maximum value otherwise 
+\end{DoxyReturn}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!get\+Next\+Move@{get\+Next\+Move}}
+\index{get\+Next\+Move@{get\+Next\+Move}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Next\+Move(\+Map \&map, int search\+Depth, int search\+Time, int player, int algorithm, bool is\+Playing\+Phase)}{getNextMove(Map &map, int searchDepth, int searchTime, int player, int algorithm, bool isPlayingPhase)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Move}$\ast$ get\+Next\+Move (
+\begin{DoxyParamCaption}
+\item[{{\bf Map} \&}]{map, }
+\item[{int}]{search\+Depth, }
+\item[{int}]{search\+Time, }
+\item[{int}]{player, }
+\item[{int}]{algorithm, }
+\item[{bool}]{is\+Playing\+Phase}
+\end{DoxyParamCaption}
+)}\hypertarget{algorithms_8cpp_a3a3eb3c3839a67dfdb847cdbd38248bc}{}\label{algorithms_8cpp_a3a3eb3c3839a67dfdb847cdbd38248bc}
+The function will look for the best move it can find with the given search depth or time limit constraints. Note that if both limits are set, only the depth limit will apply and the time limit will be set to its default of 90 seconds.
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & -\/ The initial state of the board \\
+\hline
+{\em search\+Depth} & -\/ The depth up to which the search tree should be build. Set to 0 to use a time limit. \\
+\hline
+{\em search\+Time} & -\/ The time limit set for the move search. Does not apply if search\+Depth has been set. \\
+\hline
+{\em player} & -\/ The player who can make a move. \\
+\hline
+{\em algorithm} & -\/ The identifier for the algorithm that should be used \\
+\hline
+{\em is\+Playering\+Phase} & -\/ Used to distinguish between playing and bombing phase\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the move identified as the best move. 
+\end{DoxyReturn}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!get\+Number\+Of\+Analyzed\+Nodes@{get\+Number\+Of\+Analyzed\+Nodes}}
+\index{get\+Number\+Of\+Analyzed\+Nodes@{get\+Number\+Of\+Analyzed\+Nodes}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Number\+Of\+Analyzed\+Nodes()}{getNumberOfAnalyzedNodes()}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t get\+Number\+Of\+Analyzed\+Nodes (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{algorithms_8cpp_a73cb7859475835f9d7612994cd62dc5f}{}\label{algorithms_8cpp_a73cb7859475835f9d7612994cd62dc5f}
+Returns the number of analysed nodes if the B\+E\+N\+C\+H\+M\+A\+RK flag has been set during compilation
+
+\begin{DoxyReturn}{Returns}
+The number of created nodes(incl. leafs) during the move search 
+\end{DoxyReturn}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!get\+Time\+Spend\+Evaluating@{get\+Time\+Spend\+Evaluating}}
+\index{get\+Time\+Spend\+Evaluating@{get\+Time\+Spend\+Evaluating}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Time\+Spend\+Evaluating()}{getTimeSpendEvaluating()}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+Time\+Spend\+Evaluating (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{algorithms_8cpp_ae469ffd1d8802da7eb4460fbea0ff5a4}{}\label{algorithms_8cpp_ae469ffd1d8802da7eb4460fbea0ff5a4}
+Returns the time spend evaluating leafs if the B\+E\+N\+C\+H\+M\+A\+RK flag has been set during compilation
+
+\begin{DoxyReturn}{Returns}
+The time in milliseconds spend evaluating game states. 
+\end{DoxyReturn}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!init\+Timer@{init\+Timer}}
+\index{init\+Timer@{init\+Timer}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{init\+Timer()}{initTimer()}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{algorithms_8cpp_a5a7931957f8a5298b3982cab604da1ee}{}\label{algorithms_8cpp_a5a7931957f8a5298b3982cab604da1ee}
+Initialise the callback function for the timer. Call this method before expecting a search time limit to work. \index{algorithms.\+cpp@{algorithms.\+cpp}!minimax@{minimax}}
+\index{minimax@{minimax}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{minimax(\+Map \&map, int turn, int depth, bool is\+Playing\+Phase)}{minimax(Map &map, int turn, int depth, bool isPlayingPhase)}}]{\setlength{\rightskip}{0pt plus 5cm}int minimax (
+\begin{DoxyParamCaption}
+\item[{{\bf Map} \&}]{map, }
+\item[{int}]{turn, }
+\item[{int}]{depth, }
+\item[{bool}]{is\+Playing\+Phase}
+\end{DoxyParamCaption}
+)}\hypertarget{algorithms_8cpp_a62f78e286b0551c4518094c4da03a224}{}\label{algorithms_8cpp_a62f78e286b0551c4518094c4da03a224}
+Executing minimax with paranoid strategy. The board will be analyzed for the given player at the leafs of the game tree. At each node the value shall be maximized for the given player turn, minimized for others. A player\textquotesingle{}s turn is represented by the branches leaving that specific node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & -\/ The current board state \\
+\hline
+{\em turn} & -\/ The player who has to make a move \\
+\hline
+{\em depth} & -\/ How deep(amount of successive moves) the algorithm should look from a specific node \\
+\hline
+{\em is\+Playing\+Phase} & -\/ Set if we are in the playing phase or bombing phase \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The evaluation value of the best move for that node 
+\end{DoxyReturn}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!move\+Sorting@{move\+Sorting}}
+\index{move\+Sorting@{move\+Sorting}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{move\+Sorting(\+Map \&map, int player, int current\+Depth, int alpha, int beta, multimap$<$ int, int $>$ $\ast$cur\+Moves, multimap$<$ int, int $>$ $\ast$next\+Moves, bool is\+Playing\+Phase)}{moveSorting(Map &map, int player, int currentDepth, int alpha, int beta, multimap< int, int > *curMoves, multimap< int, int > *nextMoves, bool isPlayingPhase)}}]{\setlength{\rightskip}{0pt plus 5cm}int move\+Sorting (
+\begin{DoxyParamCaption}
+\item[{{\bf Map} \&}]{map, }
+\item[{int}]{player, }
+\item[{int}]{current\+Depth, }
+\item[{int}]{alpha, }
+\item[{int}]{beta, }
+\item[{multimap$<$ int, int $>$ $\ast$}]{cur\+Moves, }
+\item[{multimap$<$ int, int $>$ $\ast$}]{next\+Moves, }
+\item[{bool}]{is\+Playing\+Phase}
+\end{DoxyParamCaption}
+)}\hypertarget{algorithms_8cpp_ab0176746c9b4429680e811ab245bbf18}{}\label{algorithms_8cpp_ab0176746c9b4429680e811ab245bbf18}
+Execute all except the first iteration of move sorting.
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & -\/ The inital state of the game \\
+\hline
+{\em player} & -\/ Identifies who can make the next move \\
+\hline
+{\em current\+Depth} & -\/ The depth to which the subtree should be built \\
+\hline
+{\em alpha} & -\/ The alpha value for alpha-\/beta-\/pruning \\
+\hline
+{\em beta} & -\/ The beta value for alpha-\/beta-\/pruning \\
+\hline
+{\em cur\+Moves} & -\/ A pointer to a list over which should be iterated for the moves in the root of the search tree \\
+\hline
+{\em next\+Moves} & -\/ A pointer to a list to specify the order of moves for the next iteration \\
+\hline
+{\em is\+Playing\+Phase} & -\/ Used to distinguish between playing and bombing phase \\
+\hline
+\end{DoxyParams}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!move\+Sorting\+\_\+first\+Ite@{move\+Sorting\+\_\+first\+Ite}}
+\index{move\+Sorting\+\_\+first\+Ite@{move\+Sorting\+\_\+first\+Ite}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{move\+Sorting\+\_\+first\+Ite(\+Map \&map, int turn, multimap$<$ int, int $>$ $\ast$next\+Moves, bool is\+Playing\+Phase)}{moveSorting_firstIte(Map &map, int turn, multimap< int, int > *nextMoves, bool isPlayingPhase)}}]{\setlength{\rightskip}{0pt plus 5cm}int move\+Sorting\+\_\+first\+Ite (
+\begin{DoxyParamCaption}
+\item[{{\bf Map} \&}]{map, }
+\item[{int}]{player, }
+\item[{multimap$<$ int, int $>$ $\ast$}]{next\+Moves, }
+\item[{bool}]{is\+Playing\+Phase}
+\end{DoxyParamCaption}
+)}\hypertarget{algorithms_8cpp_a8052260a8f0da9cff66eab24ed1b9650}{}\label{algorithms_8cpp_a8052260a8f0da9cff66eab24ed1b9650}
+Execute the first iteration of move sorting.
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & -\/ The inital state of the game \\
+\hline
+{\em player} & -\/ Identifies who can make the next move \\
+\hline
+{\em next\+Moves} & -\/ A pointer to a list to store all possible moves, ordered by there expected value \\
+\hline
+{\em is\+Playing\+Phase} & -\/ Used to distinguish between playing and bombing phase \\
+\hline
+\end{DoxyParams}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!timer\+Handler@{timer\+Handler}}
+\index{timer\+Handler@{timer\+Handler}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{timer\+Handler(int signum)}{timerHandler(int signum)}}]{\setlength{\rightskip}{0pt plus 5cm}void timer\+Handler (
+\begin{DoxyParamCaption}
+\item[{int}]{signum}
+\end{DoxyParamCaption}
+)}\hypertarget{algorithms_8cpp_a63b77c555dd9a8bd02a25fbdc6e68ec0}{}\label{algorithms_8cpp_a63b77c555dd9a8bd02a25fbdc6e68ec0}
+The callback function that gets called if a signal is send.
+
+
+\begin{DoxyParams}{Parameters}
+{\em signum} & -\/ The type of signal that initiated the callback function. We only use this function to handle the timers signal \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!best\+Move@{best\+Move}}
+\index{best\+Move@{best\+Move}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{best\+Move}{bestMove}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Move} best\+Move}\hypertarget{algorithms_8cpp_a828c61171a09c044835287b7bacd4609}{}\label{algorithms_8cpp_a828c61171a09c044835287b7bacd4609}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!current\+Cell@{current\+Cell}}
+\index{current\+Cell@{current\+Cell}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{current\+Cell}{currentCell}}]{\setlength{\rightskip}{0pt plus 5cm}int current\+Cell =0}\hypertarget{algorithms_8cpp_afa68e2cbb976c9635ace78cab8b9649f}{}\label{algorithms_8cpp_afa68e2cbb976c9635ace78cab8b9649f}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!current\+Choice@{current\+Choice}}
+\index{current\+Choice@{current\+Choice}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{current\+Choice}{currentChoice}}]{\setlength{\rightskip}{0pt plus 5cm}int current\+Choice =0}\hypertarget{algorithms_8cpp_ab6d19d7a7d95dd561c9961cb9758c53e}{}\label{algorithms_8cpp_ab6d19d7a7d95dd561c9961cb9758c53e}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!current\+Time@{current\+Time}}
+\index{current\+Time@{current\+Time}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{current\+Time}{currentTime}}]{\setlength{\rightskip}{0pt plus 5cm}long current\+Time}\hypertarget{algorithms_8cpp_a6b7b2e55302348074b63cf876c897c59}{}\label{algorithms_8cpp_a6b7b2e55302348074b63cf876c897c59}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!end\+Time@{end\+Time}}
+\index{end\+Time@{end\+Time}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{end\+Time}{endTime}}]{\setlength{\rightskip}{0pt plus 5cm}long end\+Time}\hypertarget{algorithms_8cpp_a22ab9604e2a95f2750f1418182f6ec4a}{}\label{algorithms_8cpp_a22ab9604e2a95f2750f1418182f6ec4a}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!initial\+Depth@{initial\+Depth}}
+\index{initial\+Depth@{initial\+Depth}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{initial\+Depth}{initialDepth}}]{\setlength{\rightskip}{0pt plus 5cm}int initial\+Depth =0}\hypertarget{algorithms_8cpp_a2b665d11fab037e5840f1a3c300f54eb}{}\label{algorithms_8cpp_a2b665d11fab037e5840f1a3c300f54eb}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!next\+Player@{next\+Player}}
+\index{next\+Player@{next\+Player}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{next\+Player}{nextPlayer}}]{\setlength{\rightskip}{0pt plus 5cm}int next\+Player =0}\hypertarget{algorithms_8cpp_a3ec15529c4681f5a256d6f9c7820bd09}{}\label{algorithms_8cpp_a3ec15529c4681f5a256d6f9c7820bd09}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!nodes\+Analyzed@{nodes\+Analyzed}}
+\index{nodes\+Analyzed@{nodes\+Analyzed}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{nodes\+Analyzed}{nodesAnalyzed}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t nodes\+Analyzed = 0}\hypertarget{algorithms_8cpp_a506ddaf026167e3d51783c0821ba15f4}{}\label{algorithms_8cpp_a506ddaf026167e3d51783c0821ba15f4}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!number\+Of\+Players@{number\+Of\+Players}}
+\index{number\+Of\+Players@{number\+Of\+Players}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{number\+Of\+Players}{numberOfPlayers}}]{\setlength{\rightskip}{0pt plus 5cm}int number\+Of\+Players}\hypertarget{algorithms_8cpp_a5f208f3e6ce82d74980b8a795838e4b7}{}\label{algorithms_8cpp_a5f208f3e6ce82d74980b8a795838e4b7}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!player\+ID@{player\+ID}}
+\index{player\+ID@{player\+ID}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{player\+ID}{playerID}}]{\setlength{\rightskip}{0pt plus 5cm}int player\+ID =0}\hypertarget{algorithms_8cpp_a197db7ad117c560f318c1da8cef96fec}{}\label{algorithms_8cpp_a197db7ad117c560f318c1da8cef96fec}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!sa@{sa}}
+\index{sa@{sa}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{sa}{sa}}]{\setlength{\rightskip}{0pt plus 5cm}struct sigaction sa}\hypertarget{algorithms_8cpp_aae6d913766d5e5bc6823dd0c1627ef31}{}\label{algorithms_8cpp_aae6d913766d5e5bc6823dd0c1627ef31}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!search\+Start@{search\+Start}}
+\index{search\+Start@{search\+Start}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{search\+Start}{searchStart}}]{\setlength{\rightskip}{0pt plus 5cm}long search\+Start}\hypertarget{algorithms_8cpp_a3946d6b7669d3d1291cc4a9152af3ea5}{}\label{algorithms_8cpp_a3946d6b7669d3d1291cc4a9152af3ea5}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!search\+Time@{search\+Time}}
+\index{search\+Time@{search\+Time}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{search\+Time}{searchTime}}]{\setlength{\rightskip}{0pt plus 5cm}long search\+Time}\hypertarget{algorithms_8cpp_a9f67c039ba7c7286f110dc84f901b4e4}{}\label{algorithms_8cpp_a9f67c039ba7c7286f110dc84f901b4e4}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!spec@{spec}}
+\index{spec@{spec}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{spec}{spec}}]{\setlength{\rightskip}{0pt plus 5cm}struct timespec spec}\hypertarget{algorithms_8cpp_a6d17f55233303ccdf416b967e2550599}{}\label{algorithms_8cpp_a6d17f55233303ccdf416b967e2550599}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!start\+Time@{start\+Time}}
+\index{start\+Time@{start\+Time}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{start\+Time}{startTime}}]{\setlength{\rightskip}{0pt plus 5cm}long start\+Time}\hypertarget{algorithms_8cpp_a8ad49a66e91d8658c5f1f7dbcbcbbd2f}{}\label{algorithms_8cpp_a8ad49a66e91d8658c5f1f7dbcbcbbd2f}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!timer@{timer}}
+\index{timer@{timer}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{timer}{timer}}]{\setlength{\rightskip}{0pt plus 5cm}struct itimerval timer}\hypertarget{algorithms_8cpp_ad5554d1fe5a08cd896918dee210cd4a1}{}\label{algorithms_8cpp_ad5554d1fe5a08cd896918dee210cd4a1}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!time\+Spend\+Evaluating@{time\+Spend\+Evaluating}}
+\index{time\+Spend\+Evaluating@{time\+Spend\+Evaluating}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{time\+Spend\+Evaluating}{timeSpendEvaluating}}]{\setlength{\rightskip}{0pt plus 5cm}long time\+Spend\+Evaluating =0}\hypertarget{algorithms_8cpp_a9d25e301cac234ba0a5f7c7d4df0cf66}{}\label{algorithms_8cpp_a9d25e301cac234ba0a5f7c7d4df0cf66}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!was\+Window\+Succesfull@{was\+Window\+Succesfull}}
+\index{was\+Window\+Succesfull@{was\+Window\+Succesfull}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{was\+Window\+Succesfull}{wasWindowSuccesfull}}]{\setlength{\rightskip}{0pt plus 5cm}bool was\+Window\+Succesfull =false}\hypertarget{algorithms_8cpp_a283948b053f6bffecb669a20d4155fc3}{}\label{algorithms_8cpp_a283948b053f6bffecb669a20d4155fc3}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!window\+Resize@{window\+Resize}}
+\index{window\+Resize@{window\+Resize}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{window\+Resize}{windowResize}}]{\setlength{\rightskip}{0pt plus 5cm}double const window\+Resize = 20}\hypertarget{algorithms_8cpp_a7a6f5dce9a978d029b0e1b53704aad0f}{}\label{algorithms_8cpp_a7a6f5dce9a978d029b0e1b53704aad0f}
+\index{algorithms.\+cpp@{algorithms.\+cpp}!window\+Size@{window\+Size}}
+\index{window\+Size@{window\+Size}!algorithms.\+cpp@{algorithms.\+cpp}}
+\subsubsection[{\texorpdfstring{window\+Size}{windowSize}}]{\setlength{\rightskip}{0pt plus 5cm}double const window\+Size = 5}\hypertarget{algorithms_8cpp_a27ba6ca336bd67144a13eda6610c20b7}{}\label{algorithms_8cpp_a27ba6ca336bd67144a13eda6610c20b7}

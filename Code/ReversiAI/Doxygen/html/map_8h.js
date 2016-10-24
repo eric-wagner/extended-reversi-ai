@@ -1,0 +1,27 @@
+var map_8h =
+[
+    [ "Cell", "struct_cell.html", "struct_cell" ],
+    [ "Move", "struct_move.html", "struct_move" ],
+    [ "Map", "class_map.html", "class_map" ],
+    [ "DIRECTION_COUNT", "map_8h.html#a2ef64e8f493930946d7b7fd03eca27c9", null ],
+    [ "LINE_COUNT", "map_8h.html#ac55830607aac38b90f4fe35fc43c7880", null ],
+    [ "MAX_HEIGHT", "map_8h.html#a9059fa76eb5e8e86f870405d63e72c4c", null ],
+    [ "MAX_PLAYER", "map_8h.html#a4e9afb5e609dc54a28608e950d481fb1", null ],
+    [ "MAX_WIDTH", "map_8h.html#a0e9d4003787634607af9e97e14b9668b", null ],
+    [ "NO_CELL", "map_8h.html#accd32c979ded2b0c7ab1efaf8fc3756d", null ],
+    [ "NO_DIRECTION", "map_8h.html#afdfc0257053ff7e2b248e78e71241087", null ],
+    [ "NO_STONE", "map_8h.html#a5ac2d8b4af00119c5934b6186c5bfd03", null ],
+    [ "Cell", "map_8h.html#a208ce62cb3a7fe4518d722235d9d656d", null ],
+    [ "Move", "map_8h.html#a5ed3609998001d0a3c8c0e625809a89b", null ],
+    [ "decrementAmountOfActivePlayers", "map_8h.html#a82b24b2705970ca6ad65b236af54189b", null ],
+    [ "disqualifyPlayer", "map_8h.html#a19ee4d06542742d2728cd6909fb9a7b6", null ],
+    [ "freeAllocatedMemory", "map_8h.html#a58c16067b6b0af776028e03728d0af8a", null ],
+    [ "getAmountOfActivePlayers", "map_8h.html#a70bb5f8ec1d7c2fc7efe475337ac1b42", null ],
+    [ "getAmountOfCells", "map_8h.html#ab50e7f9b11f7e27b641eb04c66829808", null ],
+    [ "getAmountOfPlayers", "map_8h.html#a7a398345122a77110527daa619c51310", null ],
+    [ "getHeight", "map_8h.html#ad5d09e8c83658b92a8f3dad3c097676a", null ],
+    [ "getOffset", "map_8h.html#a607b6b82fcb4c53c5d768fa9e4ec3b84", null ],
+    [ "getWidth", "map_8h.html#a218fd926212287714b925060d809c7a5", null ],
+    [ "isDisqualified", "map_8h.html#a29698d9d174d25a7103489a4f4d88edb", null ],
+    [ "reverseOffset", "map_8h.html#a41ed2d3018018b09037b1d7df5245fe3", null ]
+];

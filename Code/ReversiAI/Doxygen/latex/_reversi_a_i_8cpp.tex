@@ -1,0 +1,78 @@
+\hypertarget{_reversi_a_i_8cpp}{}\section{src/\+Reversi\+AI.cpp File Reference}
+\label{_reversi_a_i_8cpp}\index{src/\+Reversi\+A\+I.\+cpp@{src/\+Reversi\+A\+I.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$limits$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include \char`\"{}map.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}client.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}algorithms.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_reversi_a_i_8cpp_a6fb3812c2de66e8962b6dee5144ffb03}{free\+Memory} ()
+\item 
+int \hyperlink{_reversi_a_i_8cpp_a8255265b2fcc1e4914821f307fc1d122}{test} (char $\ast$path)
+\item 
+int \hyperlink{_reversi_a_i_8cpp_a2d6592306ce6c99668ddc2d3f36e650a}{play} (string ip, string port, int algo)
+\item 
+int \hyperlink{_reversi_a_i_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{_reversi_a_i_8cpp_aca4d6542b4d589f5ecbcdc2585e8d53c}{output\+Results} =false
+\item 
+uint8\+\_\+t \hyperlink{_reversi_a_i_8cpp_ae41164029686cac80f7f6bd7aa23b153}{player} =1
+\item 
+const string \hyperlink{_reversi_a_i_8cpp_a3077da85c31208a8471d18521c99bd93}{version} = \char`\"{}v5.\+01.\+02\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Reversi\+A\+I.\+cpp@{Reversi\+A\+I.\+cpp}!free\+Memory@{free\+Memory}}
+\index{free\+Memory@{free\+Memory}!Reversi\+A\+I.\+cpp@{Reversi\+A\+I.\+cpp}}
+\subsubsection[{\texorpdfstring{free\+Memory()}{freeMemory()}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+Memory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{_reversi_a_i_8cpp_a6fb3812c2de66e8962b6dee5144ffb03}{}\label{_reversi_a_i_8cpp_a6fb3812c2de66e8962b6dee5144ffb03}
+Calls all the functions that frees the necessary space for exiting the program. \index{Reversi\+A\+I.\+cpp@{Reversi\+A\+I.\+cpp}!main@{main}}
+\index{main@{main}!Reversi\+A\+I.\+cpp@{Reversi\+A\+I.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$argv[])}{main(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{_reversi_a_i_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{}\label{_reversi_a_i_8cpp_a0ddf1224851353fc92bfbff6f499fa97}
+\index{Reversi\+A\+I.\+cpp@{Reversi\+A\+I.\+cpp}!play@{play}}
+\index{play@{play}!Reversi\+A\+I.\+cpp@{Reversi\+A\+I.\+cpp}}
+\subsubsection[{\texorpdfstring{play(string ip, string port, int algo)}{play(string ip, string port, int algo)}}]{\setlength{\rightskip}{0pt plus 5cm}int play (
+\begin{DoxyParamCaption}
+\item[{string}]{ip, }
+\item[{string}]{port, }
+\item[{int}]{algo}
+\end{DoxyParamCaption}
+)}\hypertarget{_reversi_a_i_8cpp_a2d6592306ce6c99668ddc2d3f36e650a}{}\label{_reversi_a_i_8cpp_a2d6592306ce6c99668ddc2d3f36e650a}
+\index{Reversi\+A\+I.\+cpp@{Reversi\+A\+I.\+cpp}!test@{test}}
+\index{test@{test}!Reversi\+A\+I.\+cpp@{Reversi\+A\+I.\+cpp}}
+\subsubsection[{\texorpdfstring{test(char $\ast$path)}{test(char *path)}}]{\setlength{\rightskip}{0pt plus 5cm}int test (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{_reversi_a_i_8cpp_a8255265b2fcc1e4914821f307fc1d122}{}\label{_reversi_a_i_8cpp_a8255265b2fcc1e4914821f307fc1d122}
+
+
+\subsection{Variable Documentation}
+\index{Reversi\+A\+I.\+cpp@{Reversi\+A\+I.\+cpp}!output\+Results@{output\+Results}}
+\index{output\+Results@{output\+Results}!Reversi\+A\+I.\+cpp@{Reversi\+A\+I.\+cpp}}
+\subsubsection[{\texorpdfstring{output\+Results}{outputResults}}]{\setlength{\rightskip}{0pt plus 5cm}bool output\+Results =false}\hypertarget{_reversi_a_i_8cpp_aca4d6542b4d589f5ecbcdc2585e8d53c}{}\label{_reversi_a_i_8cpp_aca4d6542b4d589f5ecbcdc2585e8d53c}
+\index{Reversi\+A\+I.\+cpp@{Reversi\+A\+I.\+cpp}!player@{player}}
+\index{player@{player}!Reversi\+A\+I.\+cpp@{Reversi\+A\+I.\+cpp}}
+\subsubsection[{\texorpdfstring{player}{player}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t player =1}\hypertarget{_reversi_a_i_8cpp_ae41164029686cac80f7f6bd7aa23b153}{}\label{_reversi_a_i_8cpp_ae41164029686cac80f7f6bd7aa23b153}
+\index{Reversi\+A\+I.\+cpp@{Reversi\+A\+I.\+cpp}!version@{version}}
+\index{version@{version}!Reversi\+A\+I.\+cpp@{Reversi\+A\+I.\+cpp}}
+\subsubsection[{\texorpdfstring{version}{version}}]{\setlength{\rightskip}{0pt plus 5cm}const string version = \char`\"{}v5.\+01.\+02\char`\"{}}\hypertarget{_reversi_a_i_8cpp_a3077da85c31208a8471d18521c99bd93}{}\label{_reversi_a_i_8cpp_a3077da85c31208a8471d18521c99bd93}

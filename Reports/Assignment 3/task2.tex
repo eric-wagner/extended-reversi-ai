@@ -1,0 +1,16 @@
+\section{Task 2}
+
+For this task, we implemented the function 
+\begin{lstlisting}[frame=none, numbers=none]
+int32_t alphabeta(Map* map, int turn, int depth, bool isPlayingPhase, int alpha, int beta);
+\end{lstlisting}
+which is executing Alpha-Beta pruning, which prunes the “irrelevant” branches of the search tree. 
+Most of the variables are the same as those of the MiniMax algorithm. The cut-off value is a given \emph{depth}, which determines how many move-combinations are going to be evaluated as a upper bound. The \emph{turn} (which players turn it is to make a move) needs to be known, as the node value shall be maximised for the own players turn, or else minimised. Also we need to know, which phase the game currently is in, which can be playing or bombing phase, so that the corresponding evaluation function is used. Newly added variables are the \emph{alpha} and \emph{beta} values which describe the worst case scenario for the player. \\
+A node represents a game state and multiple nodes may have the same game state. The children of a node are nodes, that result from their parents game state by a move from the current drawing player. That way a player's move is represented by the branches leaving a specific node. The board will be evaluated at some of the leaves of the game tree. Leaves will not get evaluated if a sister or brother leaf was already evaluated with a bigger value then \emph{alpha}. \emph{alpha} is called the first time with the minimal value possible and \emph{beta} with the maximum value possible of the variable type, in this case int.
+\\\\
+If the algorithms depth is 0, a leaf is reached. The state will then be analysed and the evaluation value returned. If the depth is yet 1 or greater, the function iterates through the map and goes deeper. In a maximizing case, the evaluated score gets compared with \emph{alpha} and becomes the new \emph{alpha} if it is higher. In a minimizing case, the evaluated score gets compared with \emph{beta} and becomes the new \emph{beta} if it is lower. If \emph{alpha} is higher or equal to \emph{beta} the rest of the possible moves of the current state of the board won't get evaluated. Otherwise for every possible move from the current state of the board by calling 
+\begin{lstlisting}[frame=none, numbers=none]
+alphabeta(&mapCopy,(turn%numberOfPlayers)+1 ,depth-1, true, alpha, beta);
+alphabeta(&mapCopy,(turn%numberOfPlayers)+1 ,depth-1, false, alpha, beta);
+\end{lstlisting}
+The first gets called in the playing phase and the second one in the bombing phase. \\

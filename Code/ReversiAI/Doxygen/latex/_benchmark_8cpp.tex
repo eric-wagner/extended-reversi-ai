@@ -1,0 +1,91 @@
+\hypertarget{_benchmark_8cpp}{}\section{src/\+Benchmark.cpp File Reference}
+\label{_benchmark_8cpp}\index{src/\+Benchmark.\+cpp@{src/\+Benchmark.\+cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\\*
+{\ttfamily \#include $<$stdlib.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$limits.\+h$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$ctime$>$}\\*
+{\ttfamily \#include $<$cstdlib$>$}\\*
+{\ttfamily \#include $<$unistd.\+h$>$}\\*
+{\ttfamily \#include $<$time.\+h$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include \char`\"{}map.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}algorithms.\+h\char`\"{}}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_benchmark_8cpp_a67c9b21c8dc60933cc28f5e1a1d3072d}{evaluate\+Playing\+Phase} (string path, long timelimit)
+\item 
+void \hyperlink{_benchmark_8cpp_a31245f5007f5f1ce51d45394551341b8}{evaluate\+Bombing\+Phase} (string path, long timelimit)
+\item 
+void \hyperlink{_benchmark_8cpp_a50581b57dcbf53a7e60dba7b8ac815cb}{evaluate\+Minimax} (string path, int depth)
+\item 
+void \hyperlink{_benchmark_8cpp_ac9647bbe38d0c292b89fed61540f1405}{evaluate\+Alpha\+Beta} (string path, int depth)
+\item 
+void \hyperlink{_benchmark_8cpp_af921c71f8c318523d6c179116f33bd72}{evaluate\+Alpha\+Beta\+Move\+Sorting} (string path, int depth)
+\item 
+void \hyperlink{_benchmark_8cpp_a17a2e368dbd85c3985ed012ca1e1272a}{evaluate\+Aspirational\+Windows} (string path, int depth)
+\item 
+int \hyperlink{_benchmark_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main} (int argc, char $\ast$argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{Benchmark.\+cpp@{Benchmark.\+cpp}!evaluate\+Alpha\+Beta@{evaluate\+Alpha\+Beta}}
+\index{evaluate\+Alpha\+Beta@{evaluate\+Alpha\+Beta}!Benchmark.\+cpp@{Benchmark.\+cpp}}
+\subsubsection[{\texorpdfstring{evaluate\+Alpha\+Beta(string path, int depth)}{evaluateAlphaBeta(string path, int depth)}}]{\setlength{\rightskip}{0pt plus 5cm}void evaluate\+Alpha\+Beta (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}\hypertarget{_benchmark_8cpp_ac9647bbe38d0c292b89fed61540f1405}{}\label{_benchmark_8cpp_ac9647bbe38d0c292b89fed61540f1405}
+\index{Benchmark.\+cpp@{Benchmark.\+cpp}!evaluate\+Alpha\+Beta\+Move\+Sorting@{evaluate\+Alpha\+Beta\+Move\+Sorting}}
+\index{evaluate\+Alpha\+Beta\+Move\+Sorting@{evaluate\+Alpha\+Beta\+Move\+Sorting}!Benchmark.\+cpp@{Benchmark.\+cpp}}
+\subsubsection[{\texorpdfstring{evaluate\+Alpha\+Beta\+Move\+Sorting(string path, int depth)}{evaluateAlphaBetaMoveSorting(string path, int depth)}}]{\setlength{\rightskip}{0pt plus 5cm}void evaluate\+Alpha\+Beta\+Move\+Sorting (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}\hypertarget{_benchmark_8cpp_af921c71f8c318523d6c179116f33bd72}{}\label{_benchmark_8cpp_af921c71f8c318523d6c179116f33bd72}
+\index{Benchmark.\+cpp@{Benchmark.\+cpp}!evaluate\+Aspirational\+Windows@{evaluate\+Aspirational\+Windows}}
+\index{evaluate\+Aspirational\+Windows@{evaluate\+Aspirational\+Windows}!Benchmark.\+cpp@{Benchmark.\+cpp}}
+\subsubsection[{\texorpdfstring{evaluate\+Aspirational\+Windows(string path, int depth)}{evaluateAspirationalWindows(string path, int depth)}}]{\setlength{\rightskip}{0pt plus 5cm}void evaluate\+Aspirational\+Windows (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}\hypertarget{_benchmark_8cpp_a17a2e368dbd85c3985ed012ca1e1272a}{}\label{_benchmark_8cpp_a17a2e368dbd85c3985ed012ca1e1272a}
+\index{Benchmark.\+cpp@{Benchmark.\+cpp}!evaluate\+Bombing\+Phase@{evaluate\+Bombing\+Phase}}
+\index{evaluate\+Bombing\+Phase@{evaluate\+Bombing\+Phase}!Benchmark.\+cpp@{Benchmark.\+cpp}}
+\subsubsection[{\texorpdfstring{evaluate\+Bombing\+Phase(string path, long timelimit)}{evaluateBombingPhase(string path, long timelimit)}}]{\setlength{\rightskip}{0pt plus 5cm}void evaluate\+Bombing\+Phase (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{long}]{timelimit}
+\end{DoxyParamCaption}
+)}\hypertarget{_benchmark_8cpp_a31245f5007f5f1ce51d45394551341b8}{}\label{_benchmark_8cpp_a31245f5007f5f1ce51d45394551341b8}
+\index{Benchmark.\+cpp@{Benchmark.\+cpp}!evaluate\+Minimax@{evaluate\+Minimax}}
+\index{evaluate\+Minimax@{evaluate\+Minimax}!Benchmark.\+cpp@{Benchmark.\+cpp}}
+\subsubsection[{\texorpdfstring{evaluate\+Minimax(string path, int depth)}{evaluateMinimax(string path, int depth)}}]{\setlength{\rightskip}{0pt plus 5cm}void evaluate\+Minimax (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{int}]{depth}
+\end{DoxyParamCaption}
+)}\hypertarget{_benchmark_8cpp_a50581b57dcbf53a7e60dba7b8ac815cb}{}\label{_benchmark_8cpp_a50581b57dcbf53a7e60dba7b8ac815cb}
+\index{Benchmark.\+cpp@{Benchmark.\+cpp}!evaluate\+Playing\+Phase@{evaluate\+Playing\+Phase}}
+\index{evaluate\+Playing\+Phase@{evaluate\+Playing\+Phase}!Benchmark.\+cpp@{Benchmark.\+cpp}}
+\subsubsection[{\texorpdfstring{evaluate\+Playing\+Phase(string path, long timelimit)}{evaluatePlayingPhase(string path, long timelimit)}}]{\setlength{\rightskip}{0pt plus 5cm}void evaluate\+Playing\+Phase (
+\begin{DoxyParamCaption}
+\item[{string}]{path, }
+\item[{long}]{timelimit}
+\end{DoxyParamCaption}
+)}\hypertarget{_benchmark_8cpp_a67c9b21c8dc60933cc28f5e1a1d3072d}{}\label{_benchmark_8cpp_a67c9b21c8dc60933cc28f5e1a1d3072d}
+\index{Benchmark.\+cpp@{Benchmark.\+cpp}!main@{main}}
+\index{main@{main}!Benchmark.\+cpp@{Benchmark.\+cpp}}
+\subsubsection[{\texorpdfstring{main(int argc, char $\ast$argv[])}{main(int argc, char *argv[])}}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$}]{argv\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\hypertarget{_benchmark_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{}\label{_benchmark_8cpp_a0ddf1224851353fc92bfbff6f499fa97}

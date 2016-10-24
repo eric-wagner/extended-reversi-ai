@@ -1,0 +1,54 @@
+\section{Task 3+5}
+The algorithm we decided on works the following way:\\
+
+\begin{itemize}
+	\item Check if the cell that should get placed on exists.
+	\begin{itemize}
+		\item Case No: Return that the move is not valid.
+	\end{itemize}
+	\item Check if the player has a override stone if the move needs it.
+	\begin{itemize}
+		\item Case No: Return that the move is not valid.
+	\end{itemize}
+	\item for each(direction of the cell)
+	\begin{itemize}
+		\item while(next cell not an wall, the starting, an empty and a player cell)
+		\begin{itemize}
+			\item Get the new cell.
+			\item Get the new direction.
+		\end{itemize}
+		\item if(next cell is from the player)
+		\begin{itemize}
+			\item Reverse the direction.
+			\item while(next cell not the starting cell)
+			\begin{itemize}
+				\item Mark that the cell needs to get recoloured.
+				\item Get the new cell.
+				\item Get the new direction.
+			\end{itemize}
+		\end{itemize}
+	\end{itemize}
+	\item if(at least one cell was marked)
+	\begin{itemize}
+		\item Recolour all marked cells.
+		\item switch(starting cell state)
+		\begin{itemize}
+			\item case player or expansion: Take away one override stone of the player.
+			\item case inversion: Do the inversion.
+			\item case choice: Switch the stones of the player with stones of the chosen other player.
+			\item case bonus: Give the player a bomb or an override stone, depending on his choice.
+			\item case empty: Nothing special to do here.
+		\end{itemize}
+		\item Recolour starting cell.
+		\item Draw map.
+		\item Return that the move was valid.
+	\end{itemize}
+	\item if(no cell was marked and starting stone is a expansion stone)
+	\begin{itemize}
+		\item Recolour starting cell.
+		\item Take away one override stone of the player.
+		\item Draw map.
+		\item Return that the move was valid.
+	\end{itemize}
+	\item Return that the move is invalid.
+\end{itemize}

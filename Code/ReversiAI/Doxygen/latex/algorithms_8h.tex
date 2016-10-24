@@ -1,0 +1,107 @@
+\hypertarget{algorithms_8h}{}\section{src/algorithms.h File Reference}
+\label{algorithms_8h}\index{src/algorithms.\+h@{src/algorithms.\+h}}
+{\ttfamily \#include \char`\"{}map.\+h\char`\"{}}\\*
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{algorithms_8h_a61714819cc04d4c4210d92d8ddb25027}{M\+I\+N\+I\+M\+AX}~1
+\item 
+\#define \hyperlink{algorithms_8h_a40588be0c59f51b0687ec753f28e2786}{A\+L\+P\+H\+A\+B\+E\+TA}~2
+\item 
+\#define \hyperlink{algorithms_8h_aca1d4514f788e6e2a03b49250a24115b}{A\+L\+P\+H\+A\+B\+E\+T\+A\+\_\+\+M\+O\+V\+E\+S\+O\+R\+T\+I\+NG}~3
+\item 
+\#define \hyperlink{algorithms_8h_a1ed8e6916e641b69fdb9ceea0e87dc81}{A\+S\+P\+I\+R\+A\+T\+I\+O\+N\+A\+L\+\_\+\+W\+I\+N\+D\+OW}~4
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_move}{Move} $\ast$ \hyperlink{algorithms_8h_a3a3eb3c3839a67dfdb847cdbd38248bc}{get\+Next\+Move} (\hyperlink{class_map}{Map} \&\hyperlink{client_8cpp_a7bdaf8655b48f0d7994eb54ec1da4981}{map}, int \hyperlink{client_8cpp_aef69b20a57a9a3f2bd36ab2283c383ad}{search\+Depth}, int \hyperlink{algorithms_8cpp_a9f67c039ba7c7286f110dc84f901b4e4}{search\+Time}, int \hyperlink{_reversi_a_i_8cpp_ae41164029686cac80f7f6bd7aa23b153}{player}, int algorithm, bool is\+Playing\+Phase)
+\item 
+uint64\+\_\+t \hyperlink{algorithms_8h_a8168bfe47c14851867d4e703dd15611c}{get\+Number\+Of\+Analyzed\+Nodes} (void)
+\item 
+long \hyperlink{algorithms_8h_a46a459c8d8d385dd9c069abdae7e99be}{get\+Time\+Spend\+Evaluating} (void)
+\item 
+void \hyperlink{algorithms_8h_a5a7931957f8a5298b3982cab604da1ee}{init\+Timer} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{algorithms.\+h@{algorithms.\+h}!A\+L\+P\+H\+A\+B\+E\+TA@{A\+L\+P\+H\+A\+B\+E\+TA}}
+\index{A\+L\+P\+H\+A\+B\+E\+TA@{A\+L\+P\+H\+A\+B\+E\+TA}!algorithms.\+h@{algorithms.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+P\+H\+A\+B\+E\+TA}{ALPHABETA}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+P\+H\+A\+B\+E\+TA~2}\hypertarget{algorithms_8h_a40588be0c59f51b0687ec753f28e2786}{}\label{algorithms_8h_a40588be0c59f51b0687ec753f28e2786}
+\index{algorithms.\+h@{algorithms.\+h}!A\+L\+P\+H\+A\+B\+E\+T\+A\+\_\+\+M\+O\+V\+E\+S\+O\+R\+T\+I\+NG@{A\+L\+P\+H\+A\+B\+E\+T\+A\+\_\+\+M\+O\+V\+E\+S\+O\+R\+T\+I\+NG}}
+\index{A\+L\+P\+H\+A\+B\+E\+T\+A\+\_\+\+M\+O\+V\+E\+S\+O\+R\+T\+I\+NG@{A\+L\+P\+H\+A\+B\+E\+T\+A\+\_\+\+M\+O\+V\+E\+S\+O\+R\+T\+I\+NG}!algorithms.\+h@{algorithms.\+h}}
+\subsubsection[{\texorpdfstring{A\+L\+P\+H\+A\+B\+E\+T\+A\+\_\+\+M\+O\+V\+E\+S\+O\+R\+T\+I\+NG}{ALPHABETA_MOVESORTING}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+L\+P\+H\+A\+B\+E\+T\+A\+\_\+\+M\+O\+V\+E\+S\+O\+R\+T\+I\+NG~3}\hypertarget{algorithms_8h_aca1d4514f788e6e2a03b49250a24115b}{}\label{algorithms_8h_aca1d4514f788e6e2a03b49250a24115b}
+\index{algorithms.\+h@{algorithms.\+h}!A\+S\+P\+I\+R\+A\+T\+I\+O\+N\+A\+L\+\_\+\+W\+I\+N\+D\+OW@{A\+S\+P\+I\+R\+A\+T\+I\+O\+N\+A\+L\+\_\+\+W\+I\+N\+D\+OW}}
+\index{A\+S\+P\+I\+R\+A\+T\+I\+O\+N\+A\+L\+\_\+\+W\+I\+N\+D\+OW@{A\+S\+P\+I\+R\+A\+T\+I\+O\+N\+A\+L\+\_\+\+W\+I\+N\+D\+OW}!algorithms.\+h@{algorithms.\+h}}
+\subsubsection[{\texorpdfstring{A\+S\+P\+I\+R\+A\+T\+I\+O\+N\+A\+L\+\_\+\+W\+I\+N\+D\+OW}{ASPIRATIONAL_WINDOW}}]{\setlength{\rightskip}{0pt plus 5cm}\#define A\+S\+P\+I\+R\+A\+T\+I\+O\+N\+A\+L\+\_\+\+W\+I\+N\+D\+OW~4}\hypertarget{algorithms_8h_a1ed8e6916e641b69fdb9ceea0e87dc81}{}\label{algorithms_8h_a1ed8e6916e641b69fdb9ceea0e87dc81}
+\index{algorithms.\+h@{algorithms.\+h}!M\+I\+N\+I\+M\+AX@{M\+I\+N\+I\+M\+AX}}
+\index{M\+I\+N\+I\+M\+AX@{M\+I\+N\+I\+M\+AX}!algorithms.\+h@{algorithms.\+h}}
+\subsubsection[{\texorpdfstring{M\+I\+N\+I\+M\+AX}{MINIMAX}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+I\+N\+I\+M\+AX~1}\hypertarget{algorithms_8h_a61714819cc04d4c4210d92d8ddb25027}{}\label{algorithms_8h_a61714819cc04d4c4210d92d8ddb25027}
+
+
+\subsection{Function Documentation}
+\index{algorithms.\+h@{algorithms.\+h}!get\+Next\+Move@{get\+Next\+Move}}
+\index{get\+Next\+Move@{get\+Next\+Move}!algorithms.\+h@{algorithms.\+h}}
+\subsubsection[{\texorpdfstring{get\+Next\+Move(\+Map \&map, int search\+Depth, int search\+Time, int player, int algorithm, bool is\+Playing\+Phase)}{getNextMove(Map &map, int searchDepth, int searchTime, int player, int algorithm, bool isPlayingPhase)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Move}$\ast$ get\+Next\+Move (
+\begin{DoxyParamCaption}
+\item[{{\bf Map} \&}]{map, }
+\item[{int}]{search\+Depth, }
+\item[{int}]{search\+Time, }
+\item[{int}]{player, }
+\item[{int}]{algorithm, }
+\item[{bool}]{is\+Playing\+Phase}
+\end{DoxyParamCaption}
+)}\hypertarget{algorithms_8h_a3a3eb3c3839a67dfdb847cdbd38248bc}{}\label{algorithms_8h_a3a3eb3c3839a67dfdb847cdbd38248bc}
+The function will look for the best move it can find with the given search depth or time limit constraints. Note that if both limits are set, only the depth limit will apply and the time limit will be set to its default of 90 seconds.
+
+
+\begin{DoxyParams}{Parameters}
+{\em map} & -\/ The initial state of the board \\
+\hline
+{\em search\+Depth} & -\/ The depth up to which the search tree should be build. Set to 0 to use a time limit. \\
+\hline
+{\em search\+Time} & -\/ The time limit set for the move search. Does not apply if search\+Depth has been set. \\
+\hline
+{\em player} & -\/ The player who can make a move. \\
+\hline
+{\em algorithm} & -\/ The identifier for the algorithm that should be used \\
+\hline
+{\em is\+Playering\+Phase} & -\/ Used to distinguish between playing and bombing phase\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pointer to the move identified as the best move. 
+\end{DoxyReturn}
+\index{algorithms.\+h@{algorithms.\+h}!get\+Number\+Of\+Analyzed\+Nodes@{get\+Number\+Of\+Analyzed\+Nodes}}
+\index{get\+Number\+Of\+Analyzed\+Nodes@{get\+Number\+Of\+Analyzed\+Nodes}!algorithms.\+h@{algorithms.\+h}}
+\subsubsection[{\texorpdfstring{get\+Number\+Of\+Analyzed\+Nodes(void)}{getNumberOfAnalyzedNodes(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint64\+\_\+t get\+Number\+Of\+Analyzed\+Nodes (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{algorithms_8h_a8168bfe47c14851867d4e703dd15611c}{}\label{algorithms_8h_a8168bfe47c14851867d4e703dd15611c}
+Returns the number of analysed nodes if the B\+E\+N\+C\+H\+M\+A\+RK flag has been set during compilation
+
+\begin{DoxyReturn}{Returns}
+The number of created nodes(incl. leafs) during the move search 
+\end{DoxyReturn}
+\index{algorithms.\+h@{algorithms.\+h}!get\+Time\+Spend\+Evaluating@{get\+Time\+Spend\+Evaluating}}
+\index{get\+Time\+Spend\+Evaluating@{get\+Time\+Spend\+Evaluating}!algorithms.\+h@{algorithms.\+h}}
+\subsubsection[{\texorpdfstring{get\+Time\+Spend\+Evaluating(void)}{getTimeSpendEvaluating(void)}}]{\setlength{\rightskip}{0pt plus 5cm}long get\+Time\+Spend\+Evaluating (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{algorithms_8h_a46a459c8d8d385dd9c069abdae7e99be}{}\label{algorithms_8h_a46a459c8d8d385dd9c069abdae7e99be}
+Returns the time spend evaluating leafs if the B\+E\+N\+C\+H\+M\+A\+RK flag has been set during compilation
+
+\begin{DoxyReturn}{Returns}
+The time in milliseconds spend evaluating game states. 
+\end{DoxyReturn}
+\index{algorithms.\+h@{algorithms.\+h}!init\+Timer@{init\+Timer}}
+\index{init\+Timer@{init\+Timer}!algorithms.\+h@{algorithms.\+h}}
+\subsubsection[{\texorpdfstring{init\+Timer()}{initTimer()}}]{\setlength{\rightskip}{0pt plus 5cm}void init\+Timer (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{algorithms_8h_a5a7931957f8a5298b3982cab604da1ee}{}\label{algorithms_8h_a5a7931957f8a5298b3982cab604da1ee}
+Initialise the callback function for the timer. Call this method before expecting a search time limit to work. 

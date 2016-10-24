@@ -1,0 +1,266 @@
+\hypertarget{map_8cpp}{}\section{src/map.cpp File Reference}
+\label{map_8cpp}\index{src/map.\+cpp@{src/map.\+cpp}}
+{\ttfamily \#include \char`\"{}map.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}weights.\+h\char`\"{}}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$string.\+h$>$}\\*
+{\ttfamily \#include $<$sstream$>$}\\*
+{\ttfamily \#include $<$fstream$>$}\\*
+{\ttfamily \#include $<$vector$>$}\\*
+{\ttfamily \#include $<$math.\+h$>$}\\*
+{\ttfamily \#include $<$algorithm$>$}\\*
+{\ttfamily \#include $<$cstring$>$}\\*
+{\ttfamily \#include $<$set$>$}\\*
+{\ttfamily \#include $<$list$>$}\\*
+{\ttfamily \#include $<$cstdint$>$}\\*
+{\ttfamily \#include $<$limits.\+h$>$}\\*
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{map_8cpp_a218fd926212287714b925060d809c7a5}{get\+Width} (void)
+\item 
+uint32\+\_\+t \hyperlink{map_8cpp_ad5d09e8c83658b92a8f3dad3c097676a}{get\+Height} (void)
+\item 
+int \hyperlink{map_8cpp_ab50e7f9b11f7e27b641eb04c66829808}{get\+Amount\+Of\+Cells} (void)
+\item 
+uint8\+\_\+t \hyperlink{map_8cpp_a7a398345122a77110527daa619c51310}{get\+Amount\+Of\+Players} (void)
+\item 
+uint8\+\_\+t \hyperlink{map_8cpp_a70bb5f8ec1d7c2fc7efe475337ac1b42}{get\+Amount\+Of\+Active\+Players} (void)
+\item 
+void \hyperlink{map_8cpp_a82b24b2705970ca6ad65b236af54189b}{decrement\+Amount\+Of\+Active\+Players} (void)
+\item 
+bool \hyperlink{map_8cpp_a29698d9d174d25a7103489a4f4d88edb}{is\+Disqualified} (uint8\+\_\+t \hyperlink{_reversi_a_i_8cpp_ae41164029686cac80f7f6bd7aa23b153}{player})
+\item 
+void \hyperlink{map_8cpp_a19ee4d06542742d2728cd6909fb9a7b6}{disqualify\+Player} (uint8\+\_\+t \hyperlink{_reversi_a_i_8cpp_ae41164029686cac80f7f6bd7aa23b153}{player})
+\item 
+uint16\+\_\+t \hyperlink{map_8cpp_a607b6b82fcb4c53c5d768fa9e4ec3b84}{get\+Offset} (uint16\+\_\+t x, uint16\+\_\+t y)
+\item 
+void \hyperlink{map_8cpp_a41ed2d3018018b09037b1d7df5245fe3}{reverse\+Offset} (int $\ast$x, int $\ast$y, int offset)
+\item 
+void \hyperlink{map_8cpp_ae0d69026c2bdbc8c3fa6dcbc674d3070}{free\+Allocated\+Memory} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{map_8cpp_a43fd88c0b6aadc4baed3510537e03458}{free\+Cells}
+\item 
+int \hyperlink{map_8cpp_a339c9f28b92af29925c235e75f37bd11}{i\+Width}
+\item 
+int \hyperlink{map_8cpp_a2884aa55a9f2544c59a08976071b1d64}{i\+Height}
+\item 
+int \hyperlink{map_8cpp_a8057639e58afd711853b9c4e00ba4163}{i\+Cellcount}
+\item 
+int \hyperlink{map_8cpp_a2c84cdbc39bbcf31518044a404d0e814}{i\+Bomb\+Explosion\+Radius}
+\item 
+int \hyperlink{map_8cpp_ac59cab59c1f0567121ae735e6d7c32d4}{i\+Number\+Of\+Players}
+\item 
+int \hyperlink{map_8cpp_a17ca0547c39b869de0d9443f2c5e1ad4}{i\+Numer\+Of\+Active\+Players}
+\item 
+uint16\+\_\+t \hyperlink{map_8cpp_a1def030260385e674c026f48c3d721fe}{offset\+Map} \mbox{[}\hyperlink{map_8h_a0e9d4003787634607af9e97e14b9668b}{M\+A\+X\+\_\+\+W\+I\+D\+TH}\mbox{]}\mbox{[}\hyperlink{map_8h_a9059fa76eb5e8e86f870405d63e72c4c}{M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}\mbox{]}
+\item 
+int \hyperlink{map_8cpp_a52c711b451701563219ae4e515f233b9}{reverse\+OffsetX} \mbox{[}\hyperlink{map_8h_a0e9d4003787634607af9e97e14b9668b}{M\+A\+X\+\_\+\+W\+I\+D\+TH} $\ast$\hyperlink{map_8h_a9059fa76eb5e8e86f870405d63e72c4c}{M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}\mbox{]}
+\item 
+int \hyperlink{map_8cpp_a38b19f739926a6782dd0457ea6e2f8eb}{reverse\+OffsetY} \mbox{[}\hyperlink{map_8h_a0e9d4003787634607af9e97e14b9668b}{M\+A\+X\+\_\+\+W\+I\+D\+TH} $\ast$\hyperlink{map_8h_a9059fa76eb5e8e86f870405d63e72c4c}{M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}\mbox{]}
+\item 
+bool \hyperlink{map_8cpp_ada214d7fe3c13235ad73be964aa67139}{disqualified} \mbox{[}M\+A\+X\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+U\+NT+1\mbox{]}
+\item 
+\hyperlink{struct_cell}{Cell} $\ast$ \hyperlink{map_8cpp_ac87f36200d918157b4793453d1a18305}{existent\+Cell}
+\item 
+vector$<$ int $>$ $\ast$ \hyperlink{map_8cpp_aa86ba7042b3045283620abc30668039c}{cells\+On\+Line}
+\item 
+int \hyperlink{map_8cpp_addc99401340ecb10778277e17c36c77d}{line\+Count}
+\item 
+int \hyperlink{map_8cpp_a6f66255e8db50ae0e15f67f426a62ba7}{cur\+Direction}
+\item 
+int \hyperlink{map_8cpp_a3e690e3a6c456060fbeec31f56dd8abc}{cur\+Cell}
+\item 
+int \hyperlink{map_8cpp_abb5eb78959e9915b3d903b9a1ca2b6ad}{prev\+Cell}
+\item 
+int \hyperlink{map_8cpp_ad4be052f5309d5f7c93041c7844b42eb}{cur\+Player}
+\item 
+int \hyperlink{map_8cpp_ad93165117147fc95e692c66bf283d5b1}{cur\+Board\+State}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\index{map.\+cpp@{map.\+cpp}!decrement\+Amount\+Of\+Active\+Players@{decrement\+Amount\+Of\+Active\+Players}}
+\index{decrement\+Amount\+Of\+Active\+Players@{decrement\+Amount\+Of\+Active\+Players}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{decrement\+Amount\+Of\+Active\+Players(void)}{decrementAmountOfActivePlayers(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void decrement\+Amount\+Of\+Active\+Players (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8cpp_a82b24b2705970ca6ad65b236af54189b}{}\label{map_8cpp_a82b24b2705970ca6ad65b236af54189b}
+Function to decrease the number of still playing players. \index{map.\+cpp@{map.\+cpp}!disqualify\+Player@{disqualify\+Player}}
+\index{disqualify\+Player@{disqualify\+Player}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{disqualify\+Player(uint8\+\_\+t player)}{disqualifyPlayer(uint8_t player)}}]{\setlength{\rightskip}{0pt plus 5cm}void disqualify\+Player (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{player}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8cpp_a19ee4d06542742d2728cd6909fb9a7b6}{}\label{map_8cpp_a19ee4d06542742d2728cd6909fb9a7b6}
+Getter function for disqualifying status of the player. N\+O\+TE\+: Param player starts with player 1 as the number 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & -\/ The slot of the player that should get disqualified. \\
+\hline
+\end{DoxyParams}
+\index{map.\+cpp@{map.\+cpp}!free\+Allocated\+Memory@{free\+Allocated\+Memory}}
+\index{free\+Allocated\+Memory@{free\+Allocated\+Memory}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{free\+Allocated\+Memory(void)}{freeAllocatedMemory(void)}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+Allocated\+Memory (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8cpp_ae0d69026c2bdbc8c3fa6dcbc674d3070}{}\label{map_8cpp_ae0d69026c2bdbc8c3fa6dcbc674d3070}
+Frees the transitions map. \index{map.\+cpp@{map.\+cpp}!get\+Amount\+Of\+Active\+Players@{get\+Amount\+Of\+Active\+Players}}
+\index{get\+Amount\+Of\+Active\+Players@{get\+Amount\+Of\+Active\+Players}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Amount\+Of\+Active\+Players(void)}{getAmountOfActivePlayers(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t get\+Amount\+Of\+Active\+Players (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8cpp_a70bb5f8ec1d7c2fc7efe475337ac1b42}{}\label{map_8cpp_a70bb5f8ec1d7c2fc7efe475337ac1b42}
+Getter function for the number of still playing players. \index{map.\+cpp@{map.\+cpp}!get\+Amount\+Of\+Cells@{get\+Amount\+Of\+Cells}}
+\index{get\+Amount\+Of\+Cells@{get\+Amount\+Of\+Cells}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Amount\+Of\+Cells(void)}{getAmountOfCells(void)}}]{\setlength{\rightskip}{0pt plus 5cm}int get\+Amount\+Of\+Cells (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8cpp_ab50e7f9b11f7e27b641eb04c66829808}{}\label{map_8cpp_ab50e7f9b11f7e27b641eb04c66829808}
+Getter function for the number of cells. \index{map.\+cpp@{map.\+cpp}!get\+Amount\+Of\+Players@{get\+Amount\+Of\+Players}}
+\index{get\+Amount\+Of\+Players@{get\+Amount\+Of\+Players}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Amount\+Of\+Players(void)}{getAmountOfPlayers(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint8\+\_\+t get\+Amount\+Of\+Players (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8cpp_a7a398345122a77110527daa619c51310}{}\label{map_8cpp_a7a398345122a77110527daa619c51310}
+Getter function for the number of players. \index{map.\+cpp@{map.\+cpp}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Height(void)}{getHeight(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t get\+Height (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8cpp_ad5d09e8c83658b92a8f3dad3c097676a}{}\label{map_8cpp_ad5d09e8c83658b92a8f3dad3c097676a}
+Getter function for the height. \index{map.\+cpp@{map.\+cpp}!get\+Offset@{get\+Offset}}
+\index{get\+Offset@{get\+Offset}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Offset(uint16\+\_\+t x, uint16\+\_\+t y)}{getOffset(uint16_t x, uint16_t y)}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t get\+Offset (
+\begin{DoxyParamCaption}
+\item[{uint16\+\_\+t}]{x, }
+\item[{uint16\+\_\+t}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8cpp_a607b6b82fcb4c53c5d768fa9e4ec3b84}{}\label{map_8cpp_a607b6b82fcb4c53c5d768fa9e4ec3b84}
+Returns the offset of a cell at the coordinates (x,y) in the map.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ The x coordinate of the cell that should get returned. \\
+\hline
+{\em y} & -\/ The y coordinate of the cell that should get returned. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The offset of the cell in the board array. 
+\end{DoxyReturn}
+\index{map.\+cpp@{map.\+cpp}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{get\+Width(void)}{getWidth(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t get\+Width (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8cpp_a218fd926212287714b925060d809c7a5}{}\label{map_8cpp_a218fd926212287714b925060d809c7a5}
+Getter function for the width. \index{map.\+cpp@{map.\+cpp}!is\+Disqualified@{is\+Disqualified}}
+\index{is\+Disqualified@{is\+Disqualified}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{is\+Disqualified(uint8\+\_\+t player)}{isDisqualified(uint8_t player)}}]{\setlength{\rightskip}{0pt plus 5cm}bool is\+Disqualified (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{player}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8cpp_a29698d9d174d25a7103489a4f4d88edb}{}\label{map_8cpp_a29698d9d174d25a7103489a4f4d88edb}
+Getter function for getting the disqualification status of the player. N\+O\+TE\+: Param player starts with player 1 as the number 1.
+
+
+\begin{DoxyParams}{Parameters}
+{\em player} & -\/ The slot of the player that disqualification status should get checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the player is disqualified, otherwise False. 
+\end{DoxyReturn}
+\index{map.\+cpp@{map.\+cpp}!reverse\+Offset@{reverse\+Offset}}
+\index{reverse\+Offset@{reverse\+Offset}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{reverse\+Offset(int $\ast$x, int $\ast$y, int offset)}{reverseOffset(int *x, int *y, int offset)}}]{\setlength{\rightskip}{0pt plus 5cm}void reverse\+Offset (
+\begin{DoxyParamCaption}
+\item[{int $\ast$}]{x, }
+\item[{int $\ast$}]{y, }
+\item[{int}]{offset}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8cpp_a41ed2d3018018b09037b1d7df5245fe3}{}\label{map_8cpp_a41ed2d3018018b09037b1d7df5245fe3}
+Sets the coordinates at the location of the pointer of the cell that has the offset of the map.
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & -\/ Pointer to integer that gets set to the x coordinate of the cell. \\
+\hline
+{\em y} & -\/ Pointer to integer that gets set to the y coordinate of the cell. \\
+\hline
+{\em offset} & -\/ The offset of the cell which coordinates gets written into the pointers. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Variable Documentation}
+\index{map.\+cpp@{map.\+cpp}!cells\+On\+Line@{cells\+On\+Line}}
+\index{cells\+On\+Line@{cells\+On\+Line}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{cells\+On\+Line}{cellsOnLine}}]{\setlength{\rightskip}{0pt plus 5cm}vector$<$int$>$$\ast$ cells\+On\+Line}\hypertarget{map_8cpp_aa86ba7042b3045283620abc30668039c}{}\label{map_8cpp_aa86ba7042b3045283620abc30668039c}
+\index{map.\+cpp@{map.\+cpp}!cur\+Board\+State@{cur\+Board\+State}}
+\index{cur\+Board\+State@{cur\+Board\+State}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{cur\+Board\+State}{curBoardState}}]{\setlength{\rightskip}{0pt plus 5cm}int cur\+Board\+State}\hypertarget{map_8cpp_ad93165117147fc95e692c66bf283d5b1}{}\label{map_8cpp_ad93165117147fc95e692c66bf283d5b1}
+\index{map.\+cpp@{map.\+cpp}!cur\+Cell@{cur\+Cell}}
+\index{cur\+Cell@{cur\+Cell}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{cur\+Cell}{curCell}}]{\setlength{\rightskip}{0pt plus 5cm}int cur\+Cell}\hypertarget{map_8cpp_a3e690e3a6c456060fbeec31f56dd8abc}{}\label{map_8cpp_a3e690e3a6c456060fbeec31f56dd8abc}
+\index{map.\+cpp@{map.\+cpp}!cur\+Direction@{cur\+Direction}}
+\index{cur\+Direction@{cur\+Direction}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{cur\+Direction}{curDirection}}]{\setlength{\rightskip}{0pt plus 5cm}int cur\+Direction}\hypertarget{map_8cpp_a6f66255e8db50ae0e15f67f426a62ba7}{}\label{map_8cpp_a6f66255e8db50ae0e15f67f426a62ba7}
+\index{map.\+cpp@{map.\+cpp}!cur\+Player@{cur\+Player}}
+\index{cur\+Player@{cur\+Player}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{cur\+Player}{curPlayer}}]{\setlength{\rightskip}{0pt plus 5cm}int cur\+Player}\hypertarget{map_8cpp_ad4be052f5309d5f7c93041c7844b42eb}{}\label{map_8cpp_ad4be052f5309d5f7c93041c7844b42eb}
+\index{map.\+cpp@{map.\+cpp}!disqualified@{disqualified}}
+\index{disqualified@{disqualified}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{disqualified}{disqualified}}]{\setlength{\rightskip}{0pt plus 5cm}bool disqualified\mbox{[}M\+A\+X\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+U\+NT+1\mbox{]}}\hypertarget{map_8cpp_ada214d7fe3c13235ad73be964aa67139}{}\label{map_8cpp_ada214d7fe3c13235ad73be964aa67139}
+Contains a list of the players that got disqualified. \index{map.\+cpp@{map.\+cpp}!existent\+Cell@{existent\+Cell}}
+\index{existent\+Cell@{existent\+Cell}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{existent\+Cell}{existentCell}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cell}$\ast$ existent\+Cell}\hypertarget{map_8cpp_ac87f36200d918157b4793453d1a18305}{}\label{map_8cpp_ac87f36200d918157b4793453d1a18305}
+Contains all information regarding neighbours and their direction of the cells on the board. Slots correlate with the board in the class \hyperlink{class_map}{Map}. \index{map.\+cpp@{map.\+cpp}!free\+Cells@{free\+Cells}}
+\index{free\+Cells@{free\+Cells}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{free\+Cells}{freeCells}}]{\setlength{\rightskip}{0pt plus 5cm}int free\+Cells}\hypertarget{map_8cpp_a43fd88c0b6aadc4baed3510537e03458}{}\label{map_8cpp_a43fd88c0b6aadc4baed3510537e03458}
+\index{map.\+cpp@{map.\+cpp}!i\+Bomb\+Explosion\+Radius@{i\+Bomb\+Explosion\+Radius}}
+\index{i\+Bomb\+Explosion\+Radius@{i\+Bomb\+Explosion\+Radius}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+Bomb\+Explosion\+Radius}{iBombExplosionRadius}}]{\setlength{\rightskip}{0pt plus 5cm}int i\+Bomb\+Explosion\+Radius}\hypertarget{map_8cpp_a2c84cdbc39bbcf31518044a404d0e814}{}\label{map_8cpp_a2c84cdbc39bbcf31518044a404d0e814}
+\index{map.\+cpp@{map.\+cpp}!i\+Cellcount@{i\+Cellcount}}
+\index{i\+Cellcount@{i\+Cellcount}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+Cellcount}{iCellcount}}]{\setlength{\rightskip}{0pt plus 5cm}int i\+Cellcount}\hypertarget{map_8cpp_a8057639e58afd711853b9c4e00ba4163}{}\label{map_8cpp_a8057639e58afd711853b9c4e00ba4163}
+\index{map.\+cpp@{map.\+cpp}!i\+Height@{i\+Height}}
+\index{i\+Height@{i\+Height}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+Height}{iHeight}}]{\setlength{\rightskip}{0pt plus 5cm}int i\+Height}\hypertarget{map_8cpp_a2884aa55a9f2544c59a08976071b1d64}{}\label{map_8cpp_a2884aa55a9f2544c59a08976071b1d64}
+\index{map.\+cpp@{map.\+cpp}!i\+Number\+Of\+Players@{i\+Number\+Of\+Players}}
+\index{i\+Number\+Of\+Players@{i\+Number\+Of\+Players}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+Number\+Of\+Players}{iNumberOfPlayers}}]{\setlength{\rightskip}{0pt plus 5cm}int i\+Number\+Of\+Players}\hypertarget{map_8cpp_ac59cab59c1f0567121ae735e6d7c32d4}{}\label{map_8cpp_ac59cab59c1f0567121ae735e6d7c32d4}
+\index{map.\+cpp@{map.\+cpp}!i\+Numer\+Of\+Active\+Players@{i\+Numer\+Of\+Active\+Players}}
+\index{i\+Numer\+Of\+Active\+Players@{i\+Numer\+Of\+Active\+Players}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+Numer\+Of\+Active\+Players}{iNumerOfActivePlayers}}]{\setlength{\rightskip}{0pt plus 5cm}int i\+Numer\+Of\+Active\+Players}\hypertarget{map_8cpp_a17ca0547c39b869de0d9443f2c5e1ad4}{}\label{map_8cpp_a17ca0547c39b869de0d9443f2c5e1ad4}
+\index{map.\+cpp@{map.\+cpp}!i\+Width@{i\+Width}}
+\index{i\+Width@{i\+Width}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{i\+Width}{iWidth}}]{\setlength{\rightskip}{0pt plus 5cm}int i\+Width}\hypertarget{map_8cpp_a339c9f28b92af29925c235e75f37bd11}{}\label{map_8cpp_a339c9f28b92af29925c235e75f37bd11}
+\index{map.\+cpp@{map.\+cpp}!line\+Count@{line\+Count}}
+\index{line\+Count@{line\+Count}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{line\+Count}{lineCount}}]{\setlength{\rightskip}{0pt plus 5cm}int line\+Count}\hypertarget{map_8cpp_addc99401340ecb10778277e17c36c77d}{}\label{map_8cpp_addc99401340ecb10778277e17c36c77d}
+\index{map.\+cpp@{map.\+cpp}!offset\+Map@{offset\+Map}}
+\index{offset\+Map@{offset\+Map}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{offset\+Map}{offsetMap}}]{\setlength{\rightskip}{0pt plus 5cm}uint16\+\_\+t offset\+Map\mbox{[}{\bf M\+A\+X\+\_\+\+W\+I\+D\+TH}\mbox{]}\mbox{[}{\bf M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}\mbox{]}}\hypertarget{map_8cpp_a1def030260385e674c026f48c3d721fe}{}\label{map_8cpp_a1def030260385e674c026f48c3d721fe}
+Contains the offset of the cells on the board (in class \hyperlink{class_map}{Map}) and existent\+Cell to the right cell. \index{map.\+cpp@{map.\+cpp}!prev\+Cell@{prev\+Cell}}
+\index{prev\+Cell@{prev\+Cell}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{prev\+Cell}{prevCell}}]{\setlength{\rightskip}{0pt plus 5cm}int prev\+Cell}\hypertarget{map_8cpp_abb5eb78959e9915b3d903b9a1ca2b6ad}{}\label{map_8cpp_abb5eb78959e9915b3d903b9a1ca2b6ad}
+\index{map.\+cpp@{map.\+cpp}!reverse\+OffsetX@{reverse\+OffsetX}}
+\index{reverse\+OffsetX@{reverse\+OffsetX}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{reverse\+OffsetX}{reverseOffsetX}}]{\setlength{\rightskip}{0pt plus 5cm}int reverse\+OffsetX\mbox{[}{\bf M\+A\+X\+\_\+\+W\+I\+D\+TH} $\ast${\bf M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}\mbox{]}}\hypertarget{map_8cpp_a52c711b451701563219ae4e515f233b9}{}\label{map_8cpp_a52c711b451701563219ae4e515f233b9}
+Contains the x coordinate of the cell that is at offset position in the array. \index{map.\+cpp@{map.\+cpp}!reverse\+OffsetY@{reverse\+OffsetY}}
+\index{reverse\+OffsetY@{reverse\+OffsetY}!map.\+cpp@{map.\+cpp}}
+\subsubsection[{\texorpdfstring{reverse\+OffsetY}{reverseOffsetY}}]{\setlength{\rightskip}{0pt plus 5cm}int reverse\+OffsetY\mbox{[}{\bf M\+A\+X\+\_\+\+W\+I\+D\+TH} $\ast${\bf M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}\mbox{]}}\hypertarget{map_8cpp_a38b19f739926a6782dd0457ea6e2f8eb}{}\label{map_8cpp_a38b19f739926a6782dd0457ea6e2f8eb}
+Contains the y coordinate of the cell that is at offset position in the array. 

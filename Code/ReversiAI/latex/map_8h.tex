@@ -1,0 +1,86 @@
+\hypertarget{map_8h}{}\section{src/map.h File Reference}
+\label{map_8h}\index{src/map.\+h@{src/map.\+h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\\*
+{\ttfamily \#include $<$string$>$}\\*
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_cell}{Cell}
+\item 
+class \hyperlink{class_map}{Map}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{map_8h_a09ee2ecaf3bb5afe58b42b49bb658745}{M\+A\+X\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+U\+NT}~8
+\item 
+\#define \hyperlink{map_8h_a0e9d4003787634607af9e97e14b9668b}{M\+A\+X\+\_\+\+W\+I\+D\+TH}~50
+\item 
+\#define \hyperlink{map_8h_a9059fa76eb5e8e86f870405d63e72c4c}{M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}~50
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{struct_cell}{Cell} \hyperlink{map_8h_a208ce62cb3a7fe4518d722235d9d656d}{Cell}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{map_8h_a218fd926212287714b925060d809c7a5}{get\+Width} (void)
+\item 
+uint32\+\_\+t \hyperlink{map_8h_ad5d09e8c83658b92a8f3dad3c097676a}{get\+Height} (void)
+\item 
+uint32\+\_\+t \hyperlink{map_8h_a5e0c4ffc9579d92b2b0ba31fc9223211}{get\+Number\+Of\+Tiles} (void)
+\item 
+void \hyperlink{map_8h_a58c16067b6b0af776028e03728d0af8a}{free\+Allocated\+Memory} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\index{map.\+h@{map.\+h}!M\+A\+X\+\_\+\+H\+E\+I\+G\+HT@{M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}}
+\index{M\+A\+X\+\_\+\+H\+E\+I\+G\+HT@{M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}!map.\+h@{map.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+H\+E\+I\+G\+HT}{MAX_HEIGHT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+H\+E\+I\+G\+HT~50}\hypertarget{map_8h_a9059fa76eb5e8e86f870405d63e72c4c}{}\label{map_8h_a9059fa76eb5e8e86f870405d63e72c4c}
+\index{map.\+h@{map.\+h}!M\+A\+X\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+U\+NT@{M\+A\+X\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+U\+NT}}
+\index{M\+A\+X\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+U\+NT@{M\+A\+X\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+U\+NT}!map.\+h@{map.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+U\+NT}{MAX_PLAYER_COUNT}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+P\+L\+A\+Y\+E\+R\+\_\+\+C\+O\+U\+NT~8}\hypertarget{map_8h_a09ee2ecaf3bb5afe58b42b49bb658745}{}\label{map_8h_a09ee2ecaf3bb5afe58b42b49bb658745}
+\index{map.\+h@{map.\+h}!M\+A\+X\+\_\+\+W\+I\+D\+TH@{M\+A\+X\+\_\+\+W\+I\+D\+TH}}
+\index{M\+A\+X\+\_\+\+W\+I\+D\+TH@{M\+A\+X\+\_\+\+W\+I\+D\+TH}!map.\+h@{map.\+h}}
+\subsubsection[{\texorpdfstring{M\+A\+X\+\_\+\+W\+I\+D\+TH}{MAX_WIDTH}}]{\setlength{\rightskip}{0pt plus 5cm}\#define M\+A\+X\+\_\+\+W\+I\+D\+TH~50}\hypertarget{map_8h_a0e9d4003787634607af9e97e14b9668b}{}\label{map_8h_a0e9d4003787634607af9e97e14b9668b}
+
+
+\subsection{Typedef Documentation}
+\index{map.\+h@{map.\+h}!Cell@{Cell}}
+\index{Cell@{Cell}!map.\+h@{map.\+h}}
+\subsubsection[{\texorpdfstring{Cell}{Cell}}]{\setlength{\rightskip}{0pt plus 5cm}typedef struct {\bf Cell}  {\bf Cell}}\hypertarget{map_8h_a208ce62cb3a7fe4518d722235d9d656d}{}\label{map_8h_a208ce62cb3a7fe4518d722235d9d656d}
+Contains the transitions of the tile to all of its neighbors. The following values of the direction have the following meaning. 701 The X represents the tile. The values represent in which array slot 6\+X2 you have to chose to get into that direction. 543 The direction saves the direction you come from when transiting to the tile in the direction you go to, that depends on the on array slot. 
+
+\subsection{Function Documentation}
+\index{map.\+h@{map.\+h}!free\+Allocated\+Memory@{free\+Allocated\+Memory}}
+\index{free\+Allocated\+Memory@{free\+Allocated\+Memory}!map.\+h@{map.\+h}}
+\subsubsection[{\texorpdfstring{free\+Allocated\+Memory()}{freeAllocatedMemory()}}]{\setlength{\rightskip}{0pt plus 5cm}void free\+Allocated\+Memory (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{map_8h_a58c16067b6b0af776028e03728d0af8a}{}\label{map_8h_a58c16067b6b0af776028e03728d0af8a}
+\index{map.\+h@{map.\+h}!get\+Height@{get\+Height}}
+\index{get\+Height@{get\+Height}!map.\+h@{map.\+h}}
+\subsubsection[{\texorpdfstring{get\+Height(void)}{getHeight(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t get\+Height (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{map_8h_ad5d09e8c83658b92a8f3dad3c097676a}{}\label{map_8h_ad5d09e8c83658b92a8f3dad3c097676a}
+Inlined getter function for height. \index{map.\+h@{map.\+h}!get\+Number\+Of\+Tiles@{get\+Number\+Of\+Tiles}}
+\index{get\+Number\+Of\+Tiles@{get\+Number\+Of\+Tiles}!map.\+h@{map.\+h}}
+\subsubsection[{\texorpdfstring{get\+Number\+Of\+Tiles(void)}{getNumberOfTiles(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t get\+Number\+Of\+Tiles (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{map_8h_a5e0c4ffc9579d92b2b0ba31fc9223211}{}\label{map_8h_a5e0c4ffc9579d92b2b0ba31fc9223211}
+\index{map.\+h@{map.\+h}!get\+Width@{get\+Width}}
+\index{get\+Width@{get\+Width}!map.\+h@{map.\+h}}
+\subsubsection[{\texorpdfstring{get\+Width(void)}{getWidth(void)}}]{\setlength{\rightskip}{0pt plus 5cm}uint32\+\_\+t get\+Width (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\hypertarget{map_8h_a218fd926212287714b925060d809c7a5}{}\label{map_8h_a218fd926212287714b925060d809c7a5}
+Inlined getter function for the width. 

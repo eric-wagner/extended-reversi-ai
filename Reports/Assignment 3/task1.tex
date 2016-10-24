@@ -1,0 +1,24 @@
+\section{Task 1}
+
+For this task, we implemented the function 
+\begin{lstlisting}[frame=none, numbers=none]
+int32_t minimax(Map* map, int turn, int depth, int numberOfPlayers, bool isPlayingPhase);
+\end{lstlisting}
+which is executing minimax with paranoid strategy on a through \emph{map} given board. 
+The cut-off value is a given \emph{depth}, which determines how many move-combinations are going to be evaluated. The \emph{turn} (which players turn it is to make a move) needs to be known, as the node value shall be maximised for the own players turn, or else minimised. Also we need to know, in which phase the game currently is, playing or bombing phase, so that the corresponding evaluation function is used. \\
+A node represents a game state and multiple nodes may have the same game state. The children of a node are nodes, that result from their parents game state by a move from the current drawing player. That way a player's move is represented by the branches leaving a specific node. The board will be evaluated at the leaves of the game tree. 
+\\\\
+If the algorithms depth is 0, a leaf is reached. The state will then be analysed and the evaluation value returned. If the depth is yet 1 or greater, the function iterates through the map and goes deeper for every possible move from the current state of the board by calling 
+\begin{lstlisting}[frame=none, numbers=none]
+minimax(&mapCopy, (turn%numberOfPlayers)+1, depth-1, numberOfPlayers, true);
+minimax(&mapCopy, (turn%numberOfPlayers)+1, depth-1, numberOfPlayers, false);
+\end{lstlisting}
+The first gets called in the playing phase and the second one in the bombing phase. \\
+
+\noindent In the playing phase:
+\begin{itemize}
+	\item For a standard move, this is called once, for the move itself.
+	\item For a move on a tile 'b', a bonus tile, minimax is called for both choices, which are choosing a bomb or an override stone. 
+	\item For a move on a tile 'c', a choice tile, minimax is called for all possible choices, which are switching the stones with any of the participants, including himself.
+\end{itemize}
+In the bombing phase the function is simply called once per valid bomb move. 

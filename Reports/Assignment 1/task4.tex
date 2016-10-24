@@ -1,0 +1,23 @@
+\section{Task 4}
+
+The following aspects should be considered when rating the result of any given move.
+\\\textbf{build phase rating function:}
+\begin{itemize}
+	\item number of own tiles, weighted by stability\textit{(sorted from best to worst)}: 
+		\begin{itemize}
+			\item stable tiles: tiles that can not be captured by the opponent at all
+			\item semi-stable tiles: tiles that can be captured by the opponent, but not immediately in the next move/hard to capture in general) 
+			\item unstable tiles: tiles that can be captured by the opponent in the next move
+			\item high risk tiles: tiles that can be captured by the opponent in the next move and give them stable tiles
+		\end{itemize}
+	\item number of bombs captured in that move * effectiveness of bombs\textit{(=number of tiles a bomb hits)}
+	\item number of own possible moves (maximize as far as possible)
+	\item number of each opponents' possible moves (minimize as far as possible)
+	\item minimized tile loss of player=((own playerindex) - (overall capturable inversion stones))
+	\item number of available override stones (more valuable the closer it is to the end of the game/the less the opponents have left)
+\end{itemize}
+\textbf{bomb phase rating function}:
+\begin{itemize}
+	\item number of own tiles
+	\item difference to the other players' number of tiles
+\end{itemize}

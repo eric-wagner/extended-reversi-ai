@@ -1,0 +1,138 @@
+\hypertarget{class_map}{}\section{Map Class Reference}
+\label{class_map}\index{Map@{Map}}
+
+
+{\ttfamily \#include $<$map.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_map_a55ee42b4e899706549e3463bd6313334}{Map} (std\+::string path)
+\item 
+\hyperlink{class_map_a07c1670f6869ae4d2870bd99ad69aae8}{Map} (\hyperlink{class_map}{Map} \&to\+Copy\+Map)
+\item 
+virtual \hyperlink{class_map_aa403fbe09394ccf39747588f5168e3b2}{$\sim$\+Map} ()
+\item 
+\hyperlink{struct_cell}{Cell} \hyperlink{class_map_adb0eda229eadaeed3b9a5d2d3ee50549}{get\+Cell} (uint8\+\_\+t x, uint8\+\_\+t y)
+\item 
+void \hyperlink{class_map_a6a40755f8541eece2fa48e9e24a588f8}{draw} ()
+\item 
+bool \hyperlink{class_map_a5fbfd15cea00d65e57a42ce8cfa47c57}{is\+Move\+Valid} (uint8\+\_\+t x, uint8\+\_\+t y, uint8\+\_\+t player)
+\item 
+int32\+\_\+t \hyperlink{class_map_ae6b13c562aae3c06864c3bd6e03f2b67}{evaluate\+For\+Playing\+Phase} (uint8\+\_\+t player)
+\item 
+int32\+\_\+t \hyperlink{class_map_a5f03558623c19e671ad59ba78f065b7a}{evaluate\+For\+Bombing\+Phase} (uint8\+\_\+t player)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \hyperlink{class_map_a4576d77f3c95eaa29c6d3a9ea5b5ff7d}{board}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+T\+O\+DO add description for class \hyperlink{class_map}{Map} 
+
+\subsection{Constructor \& Destructor Documentation}
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection[{\texorpdfstring{Map(std\+::string path)}{Map(std::string path)}}]{\setlength{\rightskip}{0pt plus 5cm}Map\+::\+Map (
+\begin{DoxyParamCaption}
+\item[{std\+::string}]{path}
+\end{DoxyParamCaption}
+)}\hypertarget{class_map_a55ee42b4e899706549e3463bd6313334}{}\label{class_map_a55ee42b4e899706549e3463bd6313334}
+\index{Map@{Map}!Map@{Map}}
+\index{Map@{Map}!Map@{Map}}
+\subsubsection[{\texorpdfstring{Map(\+Map \&to\+Copy\+Map)}{Map(Map &toCopyMap)}}]{\setlength{\rightskip}{0pt plus 5cm}Map\+::\+Map (
+\begin{DoxyParamCaption}
+\item[{{\bf Map} \&}]{to\+Copy\+Map}
+\end{DoxyParamCaption}
+)}\hypertarget{class_map_a07c1670f6869ae4d2870bd99ad69aae8}{}\label{class_map_a07c1670f6869ae4d2870bd99ad69aae8}
+Make a copy of the map to be able to test different moves.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\index{Map@{Map}!````~Map@{$\sim$\+Map}}
+\index{````~Map@{$\sim$\+Map}!Map@{Map}}
+\subsubsection[{\texorpdfstring{$\sim$\+Map()}{~Map()}}]{\setlength{\rightskip}{0pt plus 5cm}Map\+::$\sim$\+Map (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}\hypertarget{class_map_aa403fbe09394ccf39747588f5168e3b2}{}\label{class_map_aa403fbe09394ccf39747588f5168e3b2}
+
+
+\subsection{Member Function Documentation}
+\index{Map@{Map}!draw@{draw}}
+\index{draw@{draw}!Map@{Map}}
+\subsubsection[{\texorpdfstring{draw()}{draw()}}]{\setlength{\rightskip}{0pt plus 5cm}void Map\+::draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\hypertarget{class_map_a6a40755f8541eece2fa48e9e24a588f8}{}\label{class_map_a6a40755f8541eece2fa48e9e24a588f8}
+Draw the map to the console. \index{Map@{Map}!evaluate\+For\+Bombing\+Phase@{evaluate\+For\+Bombing\+Phase}}
+\index{evaluate\+For\+Bombing\+Phase@{evaluate\+For\+Bombing\+Phase}!Map@{Map}}
+\subsubsection[{\texorpdfstring{evaluate\+For\+Bombing\+Phase(uint8\+\_\+t player)}{evaluateForBombingPhase(uint8_t player)}}]{\setlength{\rightskip}{0pt plus 5cm}int32\+\_\+t Map\+::evaluate\+For\+Bombing\+Phase (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{player}
+\end{DoxyParamCaption}
+)}\hypertarget{class_map_a5f03558623c19e671ad59ba78f065b7a}{}\label{class_map_a5f03558623c19e671ad59ba78f065b7a}
+Associate a score to the current boardstate from the perspective of the specified /p player. The heuristic generates a higher score the more promising the position looks.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\index{Map@{Map}!evaluate\+For\+Playing\+Phase@{evaluate\+For\+Playing\+Phase}}
+\index{evaluate\+For\+Playing\+Phase@{evaluate\+For\+Playing\+Phase}!Map@{Map}}
+\subsubsection[{\texorpdfstring{evaluate\+For\+Playing\+Phase(uint8\+\_\+t player)}{evaluateForPlayingPhase(uint8_t player)}}]{\setlength{\rightskip}{0pt plus 5cm}int32\+\_\+t Map\+::evaluate\+For\+Playing\+Phase (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{player}
+\end{DoxyParamCaption}
+)}\hypertarget{class_map_ae6b13c562aae3c06864c3bd6e03f2b67}{}\label{class_map_ae6b13c562aae3c06864c3bd6e03f2b67}
+Associate a score to the current boardstate from the perspective of the specified /p player. The heuristic generates a higher score the more promising the position looks.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+\index{Map@{Map}!get\+Cell@{get\+Cell}}
+\index{get\+Cell@{get\+Cell}!Map@{Map}}
+\subsubsection[{\texorpdfstring{get\+Cell(uint8\+\_\+t x, uint8\+\_\+t y)}{getCell(uint8_t x, uint8_t y)}}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Cell} Map\+::get\+Cell (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{x, }
+\item[{uint8\+\_\+t}]{y}
+\end{DoxyParamCaption}
+)}\hypertarget{class_map_adb0eda229eadaeed3b9a5d2d3ee50549}{}\label{class_map_adb0eda229eadaeed3b9a5d2d3ee50549}
+\index{Map@{Map}!is\+Move\+Valid@{is\+Move\+Valid}}
+\index{is\+Move\+Valid@{is\+Move\+Valid}!Map@{Map}}
+\subsubsection[{\texorpdfstring{is\+Move\+Valid(uint8\+\_\+t x, uint8\+\_\+t y, uint8\+\_\+t player)}{isMoveValid(uint8_t x, uint8_t y, uint8_t player)}}]{\setlength{\rightskip}{0pt plus 5cm}bool Map\+::is\+Move\+Valid (
+\begin{DoxyParamCaption}
+\item[{uint8\+\_\+t}]{x, }
+\item[{uint8\+\_\+t}]{y, }
+\item[{uint8\+\_\+t}]{player}
+\end{DoxyParamCaption}
+)}\hypertarget{class_map_a5fbfd15cea00d65e57a42ce8cfa47c57}{}\label{class_map_a5fbfd15cea00d65e57a42ce8cfa47c57}
+Checks if the player can place a stone on the cell at position (x,y), recolors the cells if the move is valid and draws it on the console.
+
+
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Data Documentation}
+\index{Map@{Map}!board@{board}}
+\index{board@{board}!Map@{Map}}
+\subsubsection[{\texorpdfstring{board}{board}}]{\setlength{\rightskip}{0pt plus 5cm}char$\ast$ Map\+::board}\hypertarget{class_map_a4576d77f3c95eaa29c6d3a9ea5b5ff7d}{}\label{class_map_a4576d77f3c95eaa29c6d3a9ea5b5ff7d}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{map_8h}{map.\+h}\item 
+src/\hyperlink{map_8cpp}{map.\+cpp}\end{DoxyCompactItemize}

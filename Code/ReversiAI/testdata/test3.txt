@@ -1,0 +1,9 @@
+2
+1
+1 1
+5 5
+- i 1 2 x
+x - 0 b x
+x x - c x
+x x x - x
+x x x x -

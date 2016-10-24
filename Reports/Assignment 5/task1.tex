@@ -1,0 +1,15 @@
+\section{Task 1 \\ Implementation of Aspiration Windows}
+The first task of this biweekly assignment was to implement aspiration windows. As we have already implemented a way to select different algorithm, we did the same with aspirational windows to make to sure that we are able to disable them at any point in time.\\\\
+The implementation of the algorithm is based upon alpha-beta pruning with move sorting enabled. The first iteration of iterative deepening is the same as previously with values of $-\infty$ for $alpha$ and $+\infty$ for $beta$.\\
+We now use the score of the best move found and try to predict the a window between which we expect the score of the next move to be in. As we use a paranoid search strategy, we know that the score will most likely go down if one of our opponents will do the move that was not captured by the previous depth limit. So we set the $alpha$ value to the score of the current best move.\\ Otherwise, if we do the last move, our score should go up. Therefore, in these cases, we set the beta value to the current score.\\
+Our first intuition to set the second value was to scale it up by a constant factor. This was not working at all, mainly because we can have a very low score but big addends(because of positive and negative factor cancelling out). So we increase/decrease the score be a fixed value depending on size of the map. Another problem was that we thought we could predict if the score goes down or not. This assumption was not true, most likely because of the way we evaluate the special stones.\\\\
+Finally we used the formula:
+
+$alpha = previousScore - x*getAmountOfCells()$
+
+$beta = previousScore + x*getAmountOfCells()$\\
+where $x$ was the variable we tried to find the optimal value for.\\\\
+If we the value returned by the move search is not between the alpha and beta value we know that we failed, low or high. In that case we will try again with just one value changed, but by a bigger margin. If we fail high, we will increase beta. Otherwise we will decrease alpha.\\ If we still fail after those adjustments, we will use $-\infty$ and $+\infty$ again.\\\\
+After trying a lot of values for $x$ we concluded that the aspirational windows do not help improve our search. The values at which we start pruning away some branches are very close to the ones where we fail to find a move at all. The range is sometimes lower than 1. This means that even if we manually set the $x$ value we see only small improvements for a very small range for $x$. Meanwhile the $x$ value we did find to work for different benchmarks ranged from 3 to 100.\\\\
+We did not include graphics as there where no informations to be gained from them other than described above, and no nice way to display what we did. We will not use aspirational windows for the moment. Before the tournament we might try to active them again if our final evaluation functions seem more suitable.
+
